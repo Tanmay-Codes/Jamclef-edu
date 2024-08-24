@@ -1,0 +1,364 @@
+[
+  {
+    "name": "Project Alpha",
+    "startDate": "2023-01-10",
+    "endDate": "2023-03-15",
+    "status": "Completed",
+    "lastActivity": "2023-03-14",
+    "history": [
+      {
+        "date": "2023-02-01",
+        "task": "Design Phase",
+        "taskStatus": "In Progress",
+        "startTime": "09:00 AM",
+        "endTime": "12:00 PM"
+      },
+      {
+        "date": "2023-03-01",
+        "task": "Development Phase",
+        "taskStatus": "Completed",
+        "startTime": "10:00 AM",
+        "endTime": "02:00 PM"
+      },
+      {
+        "date": "2023-03-05",
+        "task": "Code Review",
+        "taskStatus": "In Progress",
+        "startTime": "01:00 PM",
+        "endTime": "03:00 PM"
+      },
+      {
+        "date": "2023-03-07",
+        "task": "Unit Testing",
+        "taskStatus": "Completed",
+        "startTime": "09:00 AM",
+        "endTime": "12:00 PM"
+      },
+      {
+        "date": "2023-03-09",
+        "task": "Integration Testing",
+        "taskStatus": "In Progress",
+        "startTime": "10:00 AM",
+        "endTime": "01:00 PM"
+      },
+      {
+        "date": "2023-03-11",
+        "task": "Client Review",
+        "taskStatus": "Scheduled",
+        "startTime": "02:00 PM",
+        "endTime": "04:00 PM"
+      },
+      {
+        "date": "2023-03-13",
+        "task": "Final Deployment",
+        "taskStatus": "Completed",
+        "startTime": "08:00 AM",
+        "endTime": "11:00 AM"
+      }
+    ]
+  },
+  {
+    "name": "Project Beta",
+    "startDate": "2023-02-20",
+    "endDate": "2023-05-20",
+    "status": "In Progress",
+    "lastActivity": "2023-05-10",
+    "history": [
+      {
+        "date": "2023-03-15",
+        "task": "Requirement Gathering",
+        "taskStatus": "In Progress",
+        "startTime": "11:00 AM",
+        "endTime": "03:00 PM"
+      }
+    ]
+  },
+  {
+    "name": "Project Gamma",
+    "startDate": "2023-03-01",
+    "endDate": "2023-06-30",
+    "status": "In Progress",
+    "lastActivity": "2023-06-25",
+    "history": [
+      {
+        "date": "2023-04-10",
+        "task": "Initial Planning",
+        "taskStatus": "In Progress",
+        "startTime": "08:00 AM",
+        "endTime": "12:00 PM"
+      }
+    ]
+  },
+  {
+    "name": "Project Delta",
+    "startDate": "2023-04-15",
+    "endDate": "2023-07-15",
+    "status": "In Progress",
+    "lastActivity": "2023-07-10",
+    "history": [
+      {
+        "date": "2023-05-20",
+        "task": "Prototyping",
+        "taskStatus": "In Progress",
+        "startTime": "09:30 AM",
+        "endTime": "01:30 PM"
+      }
+    ]
+  },
+  {
+    "name": "Project Epsilon",
+    "startDate": "2023-05-01",
+    "endDate": "2023-08-01",
+    "status": "In Progress",
+    "lastActivity": "2023-07-30",
+    "history": [
+      {
+        "date": "2023-06-10",
+        "task": "Testing Phase",
+        "taskStatus": "In Progress",
+        "startTime": "10:00 AM",
+        "endTime": "02:00 PM"
+      }
+    ]
+  },
+  {
+    "name": "Project Zeta",
+    "startDate": "2023-06-01",
+    "endDate": "2023-09-01",
+    "status": "In Progress",
+    "lastActivity": "2023-08-10",
+    "history": [
+      {
+        "date": "2023-07-10",
+        "task": "Code Review",
+        "taskStatus": "In Progress",
+        "startTime": "01:00 PM",
+        "endTime": "04:00 PM"
+      }
+    ]
+  },
+  {
+    "name": "Project Eta",
+    "startDate": "2023-07-01",
+    "endDate": "2023-10-01",
+    "status": "In Progress",
+    "lastActivity": "2023-09-10",
+    "history": [
+      {
+        "date": "2023-08-15",
+        "task": "Client Meeting",
+        "taskStatus": "Scheduled",
+        "startTime": "10:00 AM",
+        "endTime": "11:00 AM"
+      }
+    ]
+  },
+  {
+    "name": "Project Theta",
+    "startDate": "2023-08-01",
+    "endDate": "2023-11-01",
+    "status": "In Progress",
+    "lastActivity": "2023-10-10",
+    "history": [
+      {
+        "date": "2023-09-20",
+        "task": "Bug Fixing",
+        "taskStatus": "In Progress",
+        "startTime": "09:00 AM",
+        "endTime": "01:00 PM"
+      }
+    ]
+  },
+  {
+    "name": "Project Iota",
+    "startDate": "2023-09-01",
+    "endDate": "2023-12-01",
+    "status": "In Progress",
+    "lastActivity": "2023-11-10",
+    "history": [
+      {
+        "date": "2023-10-25",
+        "task": "Performance Testing",
+        "taskStatus": "Completed",
+        "startTime": "02:00 PM",
+        "endTime": "05:00 PM"
+      }
+    ]
+  },
+  {
+    "name": "Project Kappa",
+    "startDate": "2023-10-01",
+    "endDate": "2024-01-01",
+    "status": "In Progress",
+    "lastActivity": "2023-12-10",
+    "history": [
+      {
+        "date": "2023-11-15",
+        "task": "Deployment",
+        "taskStatus": "Scheduled",
+        "startTime": "09:00 AM",
+        "endTime": "12:00 PM"
+      }
+    ]
+  },
+  {
+    "name": "Project Lambda",
+    "startDate": "2023-11-01",
+    "endDate": "2024-02-01",
+    "status": "In Progress",
+    "lastActivity": "2024-01-10",
+    "history": [
+      {
+        "date": "2023-12-20",
+        "task": "Training",
+        "taskStatus": "In Progress",
+        "startTime": "08:00 AM",
+        "endTime": "11:00 AM"
+      }
+    ]
+  },
+  {
+    "name": "Project Mu",
+    "startDate": "2023-12-01",
+    "endDate": "2024-03-01",
+    "status": "In Progress",
+    "lastActivity": "2024-02-10",
+    "history": [
+      {
+        "date": "2024-01-15",
+        "task": "UAT Testing",
+        "taskStatus": "Scheduled",
+        "startTime": "10:00 AM",
+        "endTime": "02:00 PM"
+      }
+    ]
+  },
+  {
+    "name": "Project Nu",
+    "startDate": "2024-01-01",
+    "endDate": "2024-04-01",
+    "status": "In Progress",
+    "lastActivity": "2024-03-10",
+    "history": [
+      {
+        "date": "2024-02-20",
+        "task": "Final Review",
+        "taskStatus": "Scheduled",
+        "startTime": "11:00 AM",
+        "endTime": "01:00 PM"
+      }
+    ]
+  },
+  {
+    "name": "Project Xi",
+    "startDate": "2024-02-01",
+    "endDate": "2024-05-01",
+    "status": "In Progress",
+    "lastActivity": "2024-04-10",
+    "history": [
+      {
+        "date": "2024-03-25",
+        "task": "Client Feedback",
+        "taskStatus": "In Progress",
+        "startTime": "09:00 AM",
+        "endTime": "12:00 PM"
+      }
+    ]
+  },
+  {
+    "name": "Project Omicron",
+    "startDate": "2024-03-01",
+    "endDate": "2024-06-01",
+    "status": "In Progress",
+    "lastActivity": "2024-05-10",
+    "history": [
+      {
+        "date": "2024-04-10",
+        "task": "Code Merge",
+        "taskStatus": "Completed",
+        "startTime": "08:00 AM",
+        "endTime": "11:00 AM"
+      }
+    ]
+  },
+  {
+    "name": "Project Pi",
+    "startDate": "2024-04-01",
+    "endDate": "2024-07-01",
+    "status": "In Progress",
+    "lastActivity": "2024-06-10",
+    "history": [
+      {
+        "date": "2024-05-15",
+        "task": "System Integration",
+        "taskStatus": "In Progress",
+        "startTime": "09:00 AM",
+        "endTime": "01:00 PM"
+      }
+    ]
+  },
+  {
+    "name": "Project Rho",
+    "startDate": "2024-05-01",
+    "endDate": "2024-08-01",
+    "status": "In Progress",
+    "lastActivity": "2024-07-10",
+    "history": [
+      {
+        "date": "2024-06-20",
+        "task": "Code Refactoring",
+        "taskStatus": "In Progress",
+        "startTime": "01:00 PM",
+        "endTime": "04:00 PM"
+      }
+    ]
+  },
+  {
+    "name": "Project Sigma",
+    "startDate": "2024-06-01",
+    "endDate": "2024-09-01",
+    "status": "In Progress",
+    "lastActivity": "2024-08-10",
+    "history": [
+      {
+        "date": "2024-07-15",
+        "task": "User Training",
+        "taskStatus": "Scheduled",
+        "startTime": "10:00 AM",
+        "endTime": "12:00 PM"
+      }
+    ]
+  },
+  {
+    "name": "Project Tau",
+    "startDate": "2024-07-01",
+    "endDate": "2024-10-01",
+    "status": "In Progress",
+    "lastActivity": "2024-09-10",
+    "history": [
+      {
+        "date": "2024-08-25",
+        "task": "Deployment Prep",
+        "taskStatus": "Scheduled",
+        "startTime": "09:00 AM",
+        "endTime": "11:00 AM"
+      }
+    ]
+  },
+  {
+    "name": "Project Upsilon",
+    "startDate": "2024-08-01",
+    "endDate": "2024-11-01",
+    "status": "In Progress",
+    "lastActivity": "2024-10-10",
+    "history": [
+      {
+        "date": "2024-09-20",
+        "task": "Go-Live",
+        "taskStatus": "Scheduled",
+        "startTime": "12:00 PM",
+        "endTime": "03:00 PM"
+      }
+    ]
+  }
+]

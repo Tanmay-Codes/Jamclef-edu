@@ -1,0 +1,84 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# React build output
+build/
+dist/
+
+# Local environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependency directories
+node_modules/
+.pnp/
+.pnp.js
+
+# Test coverage
+coverage/
+
+# Production build
+/build
+
+# Cache
+.cache/
+.next/
+out/
+.vscode/
+.idea/
+
+# Typescript specific
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
+
+# ESLint
+.eslintcache
+
+# Storybook files
+storybook-static
+
+# JetBrains IDEs
+.idea/
+
+# Ignore Mac system files
+.DS_Store
+
+# Ignore generated files by VS Code
+.vscode/
+
+# Ignore coverage reports
+coverage/
+
+# Ignore Parcel cache
+.cache/
+
+# Ignore optional eslint cache
+.eslintcache
+
+# Ignore lock files
+pnpm-lock.yaml
+
+# Ignore miscellaneous generated files
+*.swp
+*.swo
