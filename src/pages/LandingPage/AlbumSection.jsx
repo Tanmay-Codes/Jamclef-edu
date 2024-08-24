@@ -22,12 +22,15 @@ export const AlbumSection = () => {
     <Box
       sx={{
         display: "flex",
-        height: "100vh",
+        height: "100%",
         backgroundColor: theme.palette.background.offWhite,
         justifyContent: "center",
         alignItems: "center",
         perspective: "1000px", // Add perspective for the 3D effect
-        padding: 5,
+        paddingTop: 10, // Increase padding at the top
+        paddingBottom: 18, // Increase padding at the bottom
+        paddingLeft: 5,
+        paddingRight: 5,
       }}
     >
       <Container>
@@ -47,7 +50,7 @@ export const AlbumSection = () => {
                 sx={{
                   position: "relative",
                   width: "100%",
-                  height: "15em", // Specify a fixed height for the card
+                  height: "280px", // Specify a fixed height for the card
                   transformStyle: "preserve-3d",
                   transition: "transform 0.6s",
                   "&:hover": {
