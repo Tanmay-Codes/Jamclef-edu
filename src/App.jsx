@@ -10,6 +10,7 @@ import Clients from "./pages/Clients";
 import LandingPage from "./pages/LandingPage";
 import Projects from "./pages/Projects";
 import { darkTheme, lightTheme } from "./theme";
+import AboutPage from "./pages/AboutPage";
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = React.useState(false);
@@ -22,15 +23,10 @@ const App = () => {
       <CssBaseline />
       <Router>
         <Routes>
-          <Route
-            path="/"
-            element={
-              // <PublicRoute>
-              // <LoginSignup />
-              <LandingPage />
-              // </PublicRoute>
-            }
-          />
+          <Route path="/" element={<LandingPage />}>
+            <Route path="about" element={<AboutPage />} />
+          </Route>
+
           <Route
             path="/"
             element={

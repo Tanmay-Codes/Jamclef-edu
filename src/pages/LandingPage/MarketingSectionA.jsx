@@ -1,5 +1,6 @@
 import { Container, Stack, Typography } from "@mui/material";
 import marketingAimage from "../../assets/images/marketingA.png";
+import { customShadows } from "../../theme";
 const MarketingSectionA = () => {
   return (
     <Container
@@ -8,25 +9,31 @@ const MarketingSectionA = () => {
         display: "flex",
         alignItems: "center",
         paddingTop: 15,
+        paddingBottom: 10,
       }}
     >
       <Stack
-        padding={4}
         gap={7}
+        width="100%"
         direction={{ xs: "column", md: "row" }}
         justifyContent="center"
         alignItems="center"
       >
         <Stack>
-          <img height={400} src={marketingAimage} alt="certificates" />
+          <img
+            height={400}
+            src={marketingAimage}
+            style={{ filter: `drop-shadow(${customShadows[4]})` }}
+            alt="certificates"
+          />
         </Stack>
-        <Stack padding={2}>
+        <Stack width={{ xs: "100%", md: "500px" }}>
           <Typography variant="h4" fontWeight={600}>
             Confidently prepare for global certification courses.
           </Typography>
           <Typography
             variant="body"
-            marginTop={3}
+            sx={{ marginTop: 3 }}
             fontStyle="italic"
             marginBottom={1}
           >

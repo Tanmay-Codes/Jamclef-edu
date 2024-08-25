@@ -7,25 +7,41 @@ import MarketingSectionC from "./MarketingSectionC";
 import TimelineSection from "./TimelineSection";
 import Navbar from "./Navbar";
 import { Box } from "@mui/material";
-// import { CssBaseline } from "@mui/material";
+import { useRef } from "react";
+import { Outlet, useLocation } from "react-router-dom";
 
-// Hero section with carousel images, autoplay added
-
-// Album Cards Section
-
-// Footer Component - Refactored based on the new image
-
-// Main Landing Page Component
 const LandingPage = () => {
+  const location = useLocation();
+  const section1Ref = useRef(null);
+  const section2Ref = useRef(null);
+  const section3Ref = useRef(null);
+  const scrollToSection = (ref) => {
+    ref.current.scrollIntoView({
+      behavior: "smooth", // Smooth scroll behavior
+      block: "start", // Align the section to the top
+    });
+  };
   return (
     <Box sx={{ maxWidth: "100Vw" }}>
-      <Navbar />
-      <HeroSection />
-      <AlbumSection />
-      <MarketingSectionA />
-      <MarketingSectionB />
-      <MarketingSectionC />
-      <TimelineSection />
+      <Navbar
+        sectionRefs={[section1Ref, section2Ref, section3Ref]}
+        hadndleScrollToSection={scrollToSection}
+      />
+      {location.pathname == "/" && (
+        <Box>
+          <Box ref={section1Ref}>
+            <HeroSection />
+          </Box>
+          <AlbumSection />
+          <MarketingSectionA />
+          <MarketingSectionB />
+          <MarketingSectionC />
+          <TimelineSection section1Ref={section1Ref} />
+        </Box>
+      )}
+      <Box>
+        <Outlet />
+      </Box>
       <Footer />
     </Box>
   );

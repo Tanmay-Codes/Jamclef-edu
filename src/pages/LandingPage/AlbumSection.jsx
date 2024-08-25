@@ -67,7 +67,7 @@ export const AlbumSection = () => {
                     backfaceVisibility: "hidden", // Hide back face when not flipped
                     borderRadius: "16px",
                   }}
-                  elevation={3}
+                  elevation={2}
                 >
                   <CardMedia
                     component="img"
@@ -97,7 +97,7 @@ export const AlbumSection = () => {
                     justifyContent: "center",
                     alignItems: "center",
                   }}
-                  elevation={3}
+                  elevation={2}
                 >
                   <CardContent>
                     <Typography variant="h6" component="div" align="center">

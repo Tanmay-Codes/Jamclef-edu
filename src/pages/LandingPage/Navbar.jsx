@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 import {
   AppBar,
@@ -17,7 +18,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useLocation, Link } from "react-router-dom";
 import jamClefLogo from "../../assets/logos/JamClefLogo.png";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
@@ -43,25 +44,28 @@ const Navbar = () => {
     };
   }, []);
 
+  const links = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Courses", path: "/courses" },
+    { name: "Blogs", path: "/blogs" },
+    { name: "Contact", path: "/contact" },
+  ];
+
   const drawerItems = (
     <Box onClick={handleDrawerToggle} sx={{ width: 250 }}>
       <List>
-        {["Albums", "Blog", "About", "Elements", "Contact"].map((text) => (
-          <ListItem button key={text}>
-            <ListItemText primary={text} />
+        {links.map(({ name, path }, i) => (
+          <ListItem component={Link} to={path} key={i}>
+            <ListItemText primary={name} />
           </ListItem>
         ))}
+        <Stack justifyContent="center" padding={2}>
+          <Button variant="contained">LogIn/SignUp</Button>
+        </Stack>
       </List>
     </Box>
   );
-
-  const links = [
-    { name: "Albums", path: "/" },
-    { name: "Blog", path: "/blog" },
-    { name: "About", path: "/about" },
-    { name: "Elements", path: "/elements" },
-    { name: "Contact", path: "/contact" },
-  ];
 
   return (
     <>
@@ -85,7 +89,14 @@ const Navbar = () => {
             alignItems="center"
           >
             <Box>
-              <img src={jamClefLogo} height={40} alt="logo" />
+              <Link
+                to={"/"}
+                onClick={() =>
+                  props.hadndleScrollToSection(props.sectionRefs[0])
+                }
+              >
+                <img src={jamClefLogo} height={40} alt="logo" />
+              </Link>
             </Box>
             <Box>
               {isMobile ? (
@@ -99,6 +110,7 @@ const Navbar = () => {
                     <MenuIcon />
                   </IconButton>
                   <Drawer
+                    elevation={3}
                     anchor="right"
                     open={drawerOpen}
                     onClose={handleDrawerToggle}
@@ -107,7 +119,7 @@ const Navbar = () => {
                   </Drawer>
                 </>
               ) : (
-                <>
+                <Stack direction={"row"}>
                   {links.map(({ name, path }) => (
                     <Button
                       key={name}
@@ -149,7 +161,12 @@ const Navbar = () => {
                       {name}
                     </Button>
                   ))}
-                </>
+                  <Stack justifyContent="center" padding={2}>
+                    <Button variant="outlined" color="secondary">
+                      LogIn/SignUp
+                    </Button>
+                  </Stack>
+                </Stack>
               )}
             </Box>
           </Stack>

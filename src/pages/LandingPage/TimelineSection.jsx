@@ -26,13 +26,17 @@ export default function TimelineSection() {
             <Typography variant="h4" fontWeight={600}>
               Your Journey to Learning: From Booking to Certification
             </Typography>
-            <Typography variant="body" marginTop={2} marginBottom={1}>
+            <Typography variant="body" sx={{ marginTop: 2, marginBottom: 1 }}>
               Follow each step of your course journey, from booking your course
               and selecting a session to receiving valuable feedback and earning
               your certification.
             </Typography>
             <Box>
-              <Button variant="outlined" color="secondary" marginTop={2}>
+              <Button
+                variant="outlined"
+                color="secondary"
+                sx={{ marginTop: 2 }}
+              >
                 Start Now
               </Button>
             </Box>

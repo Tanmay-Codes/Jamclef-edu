@@ -2,13 +2,14 @@
 
 import { createTheme } from "@mui/material/styles";
 
-const customShadows = [
+export const customShadows = [
   "none",
   "0px 2px 4px rgba(0, 0, 0, 0.2)", // Soft shadow for buttons
   "0px 5px 10px rgba(0, 0, 0, 0.3)", // Album cards and elements
   "0px 10px 20px rgba(0, 0, 0, 0.4)", // Deeper for prominent sections
   "0px 15px 30px rgba(0, 0, 0, 0.5)", // For headers or important sections
   "0px 20px 40px rgba(0, 0, 0, 0.6)", // Strong shadows for footer
+  "0px 8px 24px rgba(0,0,0,0.2)",
 ];
 
 // Gradient options for more modern feel
