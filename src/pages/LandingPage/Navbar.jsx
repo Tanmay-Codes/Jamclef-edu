@@ -162,7 +162,12 @@ const Navbar = (props) => {
                     </Button>
                   ))}
                   <Stack justifyContent="center" padding={2}>
-                    <Button variant="outlined" color="secondary">
+                    <Button
+                      variant="outlined"
+                      color="secondary"
+                      component={Link}
+                      to="/dashboard"
+                    >
                       LogIn/SignUp
                     </Button>
                   </Stack>

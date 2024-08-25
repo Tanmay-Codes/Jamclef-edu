@@ -1,22 +1,25 @@
 import { Box, Typography } from "@mui/material";
 import Carousel from "react-material-ui-carousel"; // Import Carousel library
+import hero1 from "../../assets/images/hero1.jpeg";
+import hero2 from "../../assets/images/hero2.jpeg";
+import hero3 from "../../assets/images/hero3.jpeg";
 export const HeroSection = () => {
   //   const theme = useTheme();
   const items = [
     {
-      title: "Upcoming Dates",
-      content: "Jan 03, 2019 - Charity Concert @Miami Grand Arena",
-      img: "https://cdn.pixabay.com/photo/2023/04/01/01/28/piano-7891138_1280.jpg",
+      title: "Learn From The Best Teachers",
+      content: "Select your prefered teachers to learn from",
+      img: hero1,
     },
     {
-      title: "Listen to Our Music",
-      content: "Latest track on SoundCloud",
-      img: "https://cdn.pixabay.com/photo/2018/01/15/21/50/concert-3084876_960_720.jpg",
+      title: "Level up your skills with our experts",
+      content: "Learn your favourite songs",
+      img: hero2,
     },
     {
-      title: "About Us",
-      content: "Learn more about the band and our journey.",
-      img: "https://cdn.pixabay.com/photo/2017/06/21/22/40/guitar-2428921_1280.jpg",
+      title: "Live The Dream",
+      content: "We prepare you for global certification courses",
+      img: hero3,
     },
   ];
 
@@ -31,7 +34,9 @@ export const HeroSection = () => {
         <Box
           key={i}
           sx={{
-            backgroundImage: `url(${item.img})`,
+            // backgroundImage: `url(${item.img})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${item.img})`,
+
             backgroundSize: "cover",
             backgroundPosition: "center",
             color: "#fff", // Text color for better contrast

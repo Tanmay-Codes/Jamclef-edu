@@ -1,21 +1,46 @@
 import { useTheme } from "@emotion/react";
 import {
   Box,
+  Button,
   Card,
   CardContent,
   CardMedia,
   Container,
   Grid,
+  Stack,
   Typography,
 } from "@mui/material";
-
+import guitar from "../../assets/images/guitar.jpg";
+import vocals from "../../assets/images/vocals.jpg";
+import piano from "../../assets/images/piano.jpg";
+import musicTheory from "../../assets/images/musicTheory.jpg";
 export const AlbumSection = () => {
   const theme = useTheme();
   const albums = [
-    { title: "Guitar", image: "https://via.placeholder.com/300x300" },
-    { title: "Singing", image: "https://via.placeholder.com/300x300" },
-    { title: "Keyboard", image: "https://via.placeholder.com/300x300" },
-    { title: "Music Theory", image: "https://via.placeholder.com/300x300" },
+    {
+      title: "Guitar",
+      image: guitar,
+      content:
+        "Master the guitar and express your unique musical voice with our expertly guided course, perfect for all levels",
+    },
+    {
+      title: "Vocals",
+      image: vocals,
+      content:
+        "Enhance your vocal prowess across diverse genres with our Western Vocals course, tailored to bring out the best in your voice",
+    },
+    {
+      title: "Piano",
+      image: piano,
+      content:
+        "Unlock your potential with our piano course, where you will learn to play and create music with confidence and finesse",
+    },
+    {
+      title: "Music Theory",
+      image: musicTheory,
+      content:
+        "Deepen your understanding of music with our comprehensive Music Theory course, designed to elevate your musicianship",
+    },
   ];
 
   return (
@@ -76,7 +101,7 @@ export const AlbumSection = () => {
                     sx={{ height: "100%", borderRadius: "16px 16px 0 0" }}
                   />
                   <CardContent>
-                    <Typography gutterBottom variant="h6" component="div">
+                    <Typography gutterBottom variant="h3">
                       {album.title}
                     </Typography>
                   </CardContent>
@@ -88,7 +113,7 @@ export const AlbumSection = () => {
                     position: "absolute",
                     width: "100%",
                     height: "100%",
-                    backgroundColor: theme.palette.primary.main,
+                    backgroundImage: theme.palette.background.gradient,
                     color: theme.palette.primary.contrastText,
                     transform: "rotateY(180deg)",
                     backfaceVisibility: "hidden", // Hide front face when flipped
@@ -99,13 +124,25 @@ export const AlbumSection = () => {
                   }}
                   elevation={2}
                 >
-                  <CardContent>
-                    <Typography variant="h6" component="div" align="center">
-                      More info about {album.title}
-                    </Typography>
+                  <CardContent sx={{ padding: 2 }}>
+                    <Stack>
+                      <Typography variant="h6" color={"primary"}>
+                        {album.content}
+                      </Typography>
+                      <Button color="secondary" sx={{ marginTop: 1 }}>
+                        Learn More
+                      </Button>
+                    </Stack>
                   </CardContent>
                 </Card>
               </Box>
+              <Typography
+                variant="h6"
+                fontWeight={600}
+                sx={{ textAlign: "center", marginTop: 2 }}
+              >
+                {album.title}
+              </Typography>
             </Grid>
           ))}
         </Grid>

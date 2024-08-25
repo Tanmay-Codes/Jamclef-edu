@@ -11,6 +11,9 @@ import LandingPage from "./pages/LandingPage";
 import Projects from "./pages/Projects";
 import { darkTheme, lightTheme } from "./theme";
 import AboutPage from "./pages/AboutPage";
+import CoursesPage from "./pages/CoursesPage";
+import BlogPage from "./pages/BlogPage";
+import ContactPage from "./pages/ContactPage";
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = React.useState(false);
@@ -25,6 +28,9 @@ const App = () => {
         <Routes>
           <Route path="/" element={<LandingPage />}>
             <Route path="about" element={<AboutPage />} />
+            <Route path="courses" element={<CoursesPage />} />
+            <Route path="blogs" element={<BlogPage />} />
+            <Route path="contact" element={<ContactPage />} />
           </Route>
 
           <Route
