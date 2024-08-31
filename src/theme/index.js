@@ -13,7 +13,7 @@ export const customShadows = [
 ];
 
 // Gradient options for more modern feel
-const gradients = {
+export const gradients = {
   lightGradient: "linear-gradient(135deg, #FFDEE9 0%, #B5FFFC 100%)", // Soft pink to light blue
   darkGradient: "linear-gradient(135deg, #1E1E1E 0%, #3A3A3A 100%)", // Subtle dark shades
   vibrantGradient: "linear-gradient(135deg, #FF5722 0%, #FF9800 100%)", // Orange gradients for accent

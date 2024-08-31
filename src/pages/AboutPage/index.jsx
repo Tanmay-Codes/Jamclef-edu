@@ -1,13 +1,12 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box } from "@mui/material";
+import AboutBanner from "./AboutBanner";
+import ParallaxCard from "./ParallaxCard";
 
 export default function AboutPage() {
   return (
-    <Box height={"100Vh"}>
-      <Container>
-        <Box sx={{ marginTop: 10 }}>
-          <Typography variant="h3">About</Typography>
-        </Box>
-      </Container>
+    <Box sx={{ overflow: "hidden" }}>
+      <AboutBanner />
+      <ParallaxCard />
     </Box>
   );
 }
