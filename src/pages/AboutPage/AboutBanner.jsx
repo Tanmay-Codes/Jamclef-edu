@@ -1,10 +1,9 @@
-import { useState, useEffect } from "react";
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box } from "@mui/material";
 import { motion } from "framer-motion";
-import backImage from "../../assets/images/hero1.jpeg";
+import { useEffect, useState } from "react";
+import backImage from "../../assets/images/aboutBanner.jpg";
 const AboutBanner = () => {
   const [scrollY, setScrollY] = useState(0);
-  const theme = useTheme();
 
   const handleScroll = () => {
     setScrollY(window.scrollY);
@@ -24,7 +23,7 @@ const AboutBanner = () => {
     <Box
       sx={{
         width: "100%",
-        height: "50vh",
+        height: "60vh",
         backgroundImage: `url(${backImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -41,7 +40,7 @@ const AboutBanner = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <Typography
+        {/* <Typography
           variant="h2"
           align="center"
           sx={{
@@ -62,7 +61,7 @@ const AboutBanner = () => {
           }}
         >
           Welcome to JamClef – Where music connects students and teachers
-        </Typography>
+        </Typography> */}
       </motion.div>
     </Box>
   );

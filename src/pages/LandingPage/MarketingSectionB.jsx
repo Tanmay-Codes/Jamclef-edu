@@ -10,7 +10,7 @@ const MarketingSectionB = () => {
         display: "flex",
         alignItems: "center",
         paddingBottom: 15,
-        paddingTop: 25,
+        paddingTop: 5,
       }}
     >
       <Stack
