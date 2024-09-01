@@ -15,50 +15,6 @@ export const menuItems = [
     path: "/students",
     icon: AvTimerIcon,
   },
-  // {
-  //   title: "Schedule",
-  //   path: "/Schedule",
-  //   icon: WorkHistoryIcon,
-  //   subMenu: [
-  //     {
-  //       title: "Screenshots",
-  //       path: "/activity/Screenshots",
-  //       icon: ScreenshotMonitorIcon,
-  //     },
-  //     {
-  //       title: "Apps",
-  //       path: "/activity/apps",
-  //       icon: AppsIcon,
-  //     },
-  //     {
-  //       title: "Url",
-  //       path: "/activity/urls",
-  //       icon: AdsClickIcon,
-  //     },
-  //   ],
-  // },
-  // {
-  //   title: "Projects",
-  //   path: "/projects",
-  //   icon: BusinessCenterIcon,
-  //   subMenu: [
-  //     {
-  //       title: "Project Dashboard",
-  //       path: "/project/dashboard",
-  //       icon: DashboardIcon,
-  //     },
-  //     {
-  //       title: "Taskboard",
-  //       path: "/project/taskboard",
-  //       icon: AssignmentIcon,
-  //     },
-  //     {
-  //       title: "Projects",
-  //       path: "/projects/projects-list",
-  //       icon: ListAltIcon,
-  //     },
-  //   ],
-  // },
   {
     title: "Finance",
     path: "/finance",

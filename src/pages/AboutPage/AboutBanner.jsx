@@ -39,30 +39,7 @@ const AboutBanner = () => {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-      >
-        {/* <Typography
-          variant="h2"
-          align="center"
-          sx={{
-            color: theme.palette.common.white,
-            fontWeight: "bold",
-            textShadow: "2px 2px 8px rgba(0,0,0,0.7)",
-          }}
-        >
-          About Us
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          sx={{
-            color: theme.palette.common.white,
-            mt: 2,
-            textShadow: "1px 1px 4px rgba(0,0,0,0.5)",
-          }}
-        >
-          Welcome to JamClef – Where music connects students and teachers
-        </Typography> */}
-      </motion.div>
+      ></motion.div>
     </Box>
   );
 };

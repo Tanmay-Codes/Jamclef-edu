@@ -17,7 +17,6 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useLocation, Link } from "react-router-dom";
 import jamClefLogo from "../../assets/logos/JamClefLogo.png";
-
 const Navbar = (props) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
