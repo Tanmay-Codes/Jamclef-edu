@@ -34,3 +34,12 @@ export const menuItems = [
     subMenu: false,
   },
 ];
+
+export const vision = [
+  "Explore and Develop Musical Talents Empowering everyone to discover and cultivate their musical abilities",
+  "Create a Vibrant Music Community Building a network where musicians inspire and support each other",
+  "Make Music Education Accessible Providing high-quality education to help individuals express themselves through music",
+  "Become a One-Stop Platform Offering comprehensive resources for all a musician’s needs",
+  "Achieve a Successful Music Career Simplifying the path to a rewarding and successful career in music",
+  "Ensure Joyful and Transformative Learning Making the music learning process enjoyable and impactful",
+];

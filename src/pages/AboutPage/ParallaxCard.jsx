@@ -15,6 +15,9 @@ import trinity from "../../assets/images/trinityLogo.jpeg";
 import sam from "../../assets/images/sam.png";
 
 import { customShadows } from "../../theme";
+import VisionGrid from "./VisionGrid";
+import BannerSection from "./BannerSection";
+import CultureContent from "./CultureContent";
 const ParallaxCard = () => {
   const [scrollY, setScrollY] = useState(0);
   const theme = useTheme();
@@ -90,14 +93,14 @@ const ParallaxCard = () => {
               </Stack>
               <img src={pianoImg} width={320} />
             </Stack>
-            <Stack>
+            <Stack mt={10}>
               <Typography variant="h6" fontWeight={600}>
                 Our Mission
               </Typography>
               <FeatureCards />
             </Stack>
             {/* About founder */}
-            <Stack>
+            <Stack mt={10}>
               <Typography variant="h6" fontWeight={600} mb={4}>
                 About The Founder
               </Typography>
@@ -153,6 +156,9 @@ const ParallaxCard = () => {
               <img src={trinity} alt="trinity college of london" width={120} />
               <img src={sam} alt="SAM univ logo" width={120} />
             </Stack>
+            <VisionGrid />
+            <BannerSection />
+            <CultureContent />
           </CardContent>
         </Card>
       </Container>
