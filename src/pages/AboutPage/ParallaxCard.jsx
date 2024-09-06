@@ -1,25 +1,24 @@
-import { useState, useEffect } from "react";
 import {
   Box,
   Card,
   CardContent,
-  Typography,
-  useTheme,
   Container,
   Stack,
+  Typography,
+  useTheme,
 } from "@mui/material";
-import pianoImg from "../../assets/images/pianoImg.jpg";
-import FeatureCards from "./FeatureCards";
+import { useEffect } from "react";
 import founderImg from "../../assets/images/founderImg.jpg";
-import trinity from "../../assets/images/trinityLogo.jpeg";
+import pianoImg from "../../assets/images/pianoImg.jpg";
 import sam from "../../assets/images/sam.png";
+import trinity from "../../assets/images/trinityLogo.jpeg";
+import FeatureCards from "./FeatureCards";
 
 import { customShadows } from "../../theme";
-import VisionGrid from "./VisionGrid";
 import BannerSection from "./BannerSection";
 import CultureContent from "./CultureContent";
+import VisionGrid from "./VisionGrid";
 const ParallaxCard = () => {
-  const [scrollY, setScrollY] = useState(0);
   const theme = useTheme();
 
   useEffect(() => {
@@ -28,7 +27,6 @@ const ParallaxCard = () => {
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          setScrollY(window.scrollY);
           ticking = false;
         });
         ticking = true;
@@ -41,13 +39,12 @@ const ParallaxCard = () => {
     };
   }, []);
   // Parallax offset for the card (faster than the banner)
-  const cardParallaxOffset = -scrollY * 0.5; // Faster scroll
 
   return (
     <Box
       sx={{
         position: "relative",
-        top: `calc(-50px + ${cardParallaxOffset}px)`, // Move faster with scroll
+        top: "-50px", // Move faster with scroll
         zIndex: 1,
         transition: "top 0.1s ease-out",
       }}

@@ -1,8 +1,8 @@
 import { Box, Typography } from "@mui/material";
 import Carousel from "react-material-ui-carousel"; // Import Carousel library
-import hero1 from "../../assets/images/hero1.jpeg";
-import hero2 from "../../assets/images/hero2.jpeg";
-import hero3 from "../../assets/images/hero3.jpeg";
+import hero1 from "../../assets/images/BannerA.JPG";
+import hero2 from "../../assets/images/BannerB.JPG";
+import hero3 from "../../assets/images/BannerC.JPG";
 export const HeroSection = () => {
   //   const theme = useTheme();
   const items = [
@@ -25,7 +25,7 @@ export const HeroSection = () => {
 
   return (
     <Carousel
-      interval={5000} // Auto-scroll every 5 seconds
+      interval={3000} // Auto-scroll every 5 seconds
       stopAutoPlayOnHover={true} // Stops autoplay when hovered
       indicators={false} // Hides the navigation dots
       navButtonsAlwaysVisible // Always show the navigation arrows

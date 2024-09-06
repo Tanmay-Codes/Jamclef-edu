@@ -19,6 +19,8 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay"; // Import autoplay styles
 import SwiperCore from "swiper"; // Import Swiper modules
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import courseBannerA from "../../assets/images/courseBannerA.jpg";
+import courseBannerB from "../../assets/images/courseBannerB.jpg";
 
 // Initialize Swiper modules
 SwiperCore.use([Autoplay, Navigation, Pagination]);
@@ -109,7 +111,13 @@ const CoursesPage = () => {
       >
         <SwiperSlide>
           <Box
-            sx={{ backgroundColor: "#1976d2", textAlign: "center", padding: 8 }}
+            sx={{
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${courseBannerB})`, // Gradient overlay with the background image
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              textAlign: "center",
+              padding: 8,
+            }}
           >
             <Stack mt={5} mb={5}>
               <Typography
@@ -127,7 +135,13 @@ const CoursesPage = () => {
         </SwiperSlide>
         <SwiperSlide>
           <Box
-            sx={{ backgroundColor: "#004d40", textAlign: "center", padding: 8 }}
+            sx={{
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${courseBannerA})`, // Gradient overlay with the background image
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              textAlign: "center",
+              padding: 8,
+            }}
           >
             <Stack mt={5} mb={5}>
               <Typography

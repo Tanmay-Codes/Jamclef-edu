@@ -5,6 +5,9 @@ import cultureB from "../../assets/images/cultureImage1.jpg";
 import cultureC from "../../assets/images/cultureImg2.JPG";
 import cultureD from "../../assets/images/cultureImg3.jpg";
 import cultureE from "../../assets/images/cultureImg.jpg";
+import cultureF from "../../assets/images/cultureImg6.JPG";
+import cultureG from "../../assets/images/cultureImg7.JPG";
+import cultureH from "../../assets/images/cultureImg8.JPG";
 
 export default function ImageMasonry() {
   return (
@@ -49,6 +52,18 @@ const itemData = [
   },
   {
     img: cultureE,
+    title: "Tower",
+  },
+  {
+    img: cultureF,
+    title: "Tower",
+  },
+  {
+    img: cultureG,
+    title: "Tower",
+  },
+  {
+    img: cultureH,
     title: "Tower",
   },
 ];
