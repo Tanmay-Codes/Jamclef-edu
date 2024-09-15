@@ -1,7 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/no-unescaped-entities */
 import CheckIcon from "@mui/icons-material/Check";
 import LibraryMusicIcon from "@mui/icons-material/LibraryMusic";
-import { guitarA } from "../../../data.js";
+import { electricGuitarCourse, guitarA } from "../../../data.js";
 
 import {
   Box,
@@ -12,6 +13,8 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 // Dummy JSON data
 const courseData = {
@@ -19,6 +22,18 @@ const courseData = {
 };
 
 export default function CourseDetailSection() {
+  const [course, setCourse] = useState({});
+  const [loading, setLoading] = useState(true);
+  const { id } = useParams();
+  const courseMapping = {
+    guitar: guitarA,
+    electricGuitar: electricGuitarCourse,
+  };
+  useEffect(() => {
+    setCourse(courseMapping[id]);
+    setLoading(false);
+    console.log("course :", course);
+  }, [course]);
   return (
     <Box sx={{ p: 4 }}>
       {/* Explore Related Topics */}
@@ -50,16 +65,17 @@ export default function CourseDetailSection() {
           What you'll learn
         </Typography>
         <Grid container spacing={2}>
-          {guitarA.courseCurriculum.map((point, index) => (
-            <Grid item xs={12} sm={6} key={index}>
-              <ListItem disablePadding>
-                <ListItemIcon>
-                  <CheckIcon color="success" />
-                </ListItemIcon>
-                <ListItemText primary={point} />
-              </ListItem>
-            </Grid>
-          ))}
+          {!loading &&
+            course.courseCurriculum.map((point, index) => (
+              <Grid item xs={12} sm={6} key={index}>
+                <ListItem disablePadding>
+                  <ListItemIcon>
+                    <CheckIcon color="success" />
+                  </ListItemIcon>
+                  <ListItemText primary={point} />
+                </ListItem>
+              </Grid>
+            ))}
         </Grid>
       </Box>
 
@@ -69,16 +85,17 @@ export default function CourseDetailSection() {
           This course includes
         </Typography>
         <Grid container spacing={2}>
-          {guitarA.courseInclusions.map((item, index) => (
-            <Grid item xs={12} sm={6} key={index}>
-              <ListItem>
-                <ListItemIcon>
-                  <LibraryMusicIcon color="inherit" />
-                </ListItemIcon>
-                <ListItemText primary={item} />
-              </ListItem>
-            </Grid>
-          ))}
+          {!loading &&
+            course.courseInclusions.map((item, index) => (
+              <Grid item xs={12} sm={6} key={index}>
+                <ListItem>
+                  <ListItemIcon>
+                    <LibraryMusicIcon color="inherit" />
+                  </ListItemIcon>
+                  <ListItemText primary={item} />
+                </ListItem>
+              </Grid>
+            ))}
         </Grid>
       </Box>
     </Box>

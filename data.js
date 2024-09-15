@@ -45,35 +45,8 @@ export const vision = [
 ];
 
 export const guitarA = {
-  courseInclusions: [
-    "Certificate of Completion",
-    "Practice Material",
-    "Jamclef Starter Kit",
-    "Assignments & Feedback",
-    "Personalized Learning Path",
-    "Jam Sessions & Performance Opportunities",
-    "Lifetime Access to Resources",
-    "Invitation to Student exclusive parties and events",
-  ],
-  termsAndConditions: {
-    missedGroupLessons:
-      "There will be no compensation for missed group lessons. It is the student’s responsibility to attend on time.",
-    reschedulingPrivateLessons:
-      "To reschedule a private lesson, students must inform at least 1 hour prior to the scheduled time. Failure to do so may result in the class being marked as attended.",
-    jamclefStarterKit:
-      "The Jamclef Starter Kit (manuscript notebook, file, pen, bookmarks) is available only with Packages or upon enrolling in our premium courses.",
-    certificateOfCompletion:
-      "A Certificate of Completion will be awarded only if the student successfully completes a specified number of classes and meets the assessment criteria set for certification.",
-    courseMaterials:
-      "All necessary practice materials, including assignments and supplementary resources, will be provided throughout the course to aid the learning process.",
-    classSchedule:
-      "Classes will be conducted as per the pre-decided schedule. Any changes in the schedule will be communicated well in advance.",
-    refundPolicy:
-      "Course fees are non-refundable once the course begins, except in exceptional circumstances as deemed fit by Jamclef.",
-    codeOfConduct:
-      "Students are expected to maintain discipline during lessons, respect faculty and peers, and adhere to the guidelines provided by Jamclef.",
-  },
   courseDetails: {
+    courseId: "guitar",
     courseTag: "Guitar",
     courseTitle: "Beginner Level: Strum Your Way to Mastery",
     basePrice: "Rs499/- onwards",
@@ -101,4 +74,72 @@ export const guitarA = {
     "Building Finger Strength and Dexterity",
     "Practice and Recap",
   ],
+  courseInclusions: [
+    "Certificate of Completion",
+    "Practice Material",
+    "Jamclef Starter Kit",
+    "Assignments & Feedback",
+    "Personalized Learning Path",
+    "Jam Sessions & Performance Opportunities",
+    "Lifetime Access to Resources",
+    "Invitation to Student exclusive parties and events",
+  ],
+};
+
+export const electricGuitarCourse = {
+  courseDetails: {
+    courseId: "electricGuitar",
+    courseTag: "Electric Guitar",
+    courseTitle: "Beginner Level: Kickstart Your Guitar Journey",
+    basePrice: "Rs499/- onwards",
+    pricingOptions: {
+      oneOnOnePrivateLessons: {
+        pricePerClass: "Rs499/ Per class of 40 mins",
+        packageOf4Lessons: "Rs1849/-",
+        packageOf8Lessons: "Rs3499/-",
+      },
+      groupLessons: {
+        packageOf4Lessons: "Rs999/-",
+        packageOf8Lessons: "Rs1849/-",
+      },
+    },
+    courseDescription:
+      "Our beginner electric guitar course is designed to lay the foundation for your guitar-playing skills. You'll learn the basic techniques and fundamentals that will get you playing your favorite songs in no time. From understanding essential chord shapes to strumming confidently, this course will set you on a path to becoming a competent guitarist. No prior experience is needed—just a love for music and a desire to learn!",
+  },
+  courseCurriculum: [
+    "Basic Electric Guitar Anatomy",
+    "Open Chords and Power Chords",
+    "Basic Strumming and Picking",
+    "Reading Guitar Tabs",
+    "Simple Lead Playing",
+    "Introduction to Scales",
+    "Basic Effects and Amplification",
+    "Playing Easy Songs",
+  ],
+  courseInclusions: [
+    "Certificate of Completion",
+    "Practice Material",
+    "Assignments & Feedback",
+    "Personalized Learning Path",
+    "Lifetime Access to Course Material",
+  ],
+};
+
+export const termsAndConditions = {
+  missedGroupLessons:
+    "There will be no compensation for missed group lessons. It is the student’s responsibility to attend on time.",
+  reschedulingPrivateLessons:
+    "To reschedule a private lesson, students must inform at least 1 hour prior to the scheduled time. Failure to do so may result in the class being marked as attended.",
+  jamclefStarterKit:
+    "The Jamclef Starter Kit (manuscript notebook, file, pen, bookmarks) is available only with Packages or upon enrolling in our premium courses.",
+  certificateOfCompletion:
+    "A Certificate of Completion will be awarded only if the student successfully completes a specified number of classes and meets the assessment criteria set for certification.",
+  courseMaterials:
+    "All necessary practice materials, including assignments and supplementary resources, will be provided throughout the course to aid the learning process.",
+  classSchedule:
+    "Classes will be conducted as per the pre-decided schedule. Any changes in the schedule will be communicated well in advance.",
+  refundPolicy:
+    "Course fees are non-refundable once the course begins, except in exceptional circumstances as deemed fit by Jamclef.",
+  codeOfConduct:
+    "Students are expected to maintain discipline during lessons, respect faculty and peers, and adhere to the guidelines provided by Jamclef.",
 };

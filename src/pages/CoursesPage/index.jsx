@@ -1,33 +1,31 @@
 import {
   Box,
-  Card,
-  CardContent,
-  CardMedia,
-  Typography,
-  Button,
-  TextField,
-  Select,
-  MenuItem,
-  Grid,
   Container,
+  Grid,
+  MenuItem,
+  Select,
   Stack,
+  TextField,
+  Typography,
 } from "@mui/material";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { motion } from "framer-motion";
+import SwiperCore from "swiper"; // Import Swiper modules
 import "swiper/css";
+import "swiper/css/autoplay"; // Import autoplay styles
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/autoplay"; // Import autoplay styles
-import SwiperCore from "swiper"; // Import Swiper modules
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import courseBannerA from "../../assets/images/courseBannerA.jpg";
 import courseBannerB from "../../assets/images/courseBannerB.jpg";
-import { motion } from "framer-motion";
+import { CourseCard } from "../../components/CourseCard";
 
 // Initialize Swiper modules
 SwiperCore.use([Autoplay, Navigation, Pagination]);
 
 const courses = [
   {
+    courseId: "guitar",
     title: "Guitar Mastery for Beginners",
     instructor: "John Doe",
     price: "₹3,999",
@@ -37,7 +35,8 @@ const courses = [
     reviews: 457,
   },
   {
-    title: "Piano Essentials for All Ages",
+    courseId: "electricGuitar",
+    title: "Electric Guitar Beginner Level",
     instructor: "Jane Smith",
     price: "₹4,499",
     image:
@@ -49,52 +48,6 @@ const courses = [
 ];
 
 // eslint-disable-next-line react/prop-types
-const CourseCard = ({ title, instructor, price, image, rating, reviews }) => (
-  <Card
-    sx={{
-      maxWidth: 345,
-      borderRadius: 2,
-      boxShadow: 3,
-      transition: "transform 0.3s ease-in-out",
-      "&:hover": {
-        transform: "scale(1.05)",
-        boxShadow: 6,
-      },
-    }}
-  >
-    <CardMedia
-      component="img"
-      height="180"
-      image={image}
-      alt={title}
-      sx={{ borderRadius: "8px 8px 0 0" }}
-    />
-    <CardContent sx={{ padding: 2 }}>
-      <Typography
-        variant="h6"
-        sx={{ fontWeight: "bold", color: "primary.main" }}
-      >
-        {title}
-      </Typography>
-      <Typography variant="body2" color="text.secondary" sx={{ marginTop: 1 }}>
-        {instructor} | {rating} ★ ({reviews} reviews)
-      </Typography>
-      <Typography
-        variant="h6"
-        sx={{ fontWeight: "bold", color: "secondary.main", marginTop: 1 }}
-      >
-        {price}
-      </Typography>
-    </CardContent>
-    <Button
-      variant="contained"
-      fullWidth
-      sx={{ padding: 1, fontSize: "1rem", borderRadius: "0 0 8px 8px" }}
-    >
-      View Course
-    </Button>
-  </Card>
-);
 
 const CoursesPage = () => {
   return (
