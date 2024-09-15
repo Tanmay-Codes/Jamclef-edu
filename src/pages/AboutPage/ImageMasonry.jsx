@@ -12,7 +12,7 @@ import cultureH from "../../assets/images/cultureImg8.JPG";
 export default function ImageMasonry() {
   return (
     <Box sx={{ width: { md: "80%" }, minHeight: 829 }}>
-      <Masonry columns={3} spacing={1}>
+      <Masonry columns={{ md: 3, sm: 2 }} spacing={1}>
         {itemData.map((item, index) => (
           <div key={index}>
             <img

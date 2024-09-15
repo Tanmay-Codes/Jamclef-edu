@@ -21,6 +21,7 @@ import SwiperCore from "swiper"; // Import Swiper modules
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import courseBannerA from "../../assets/images/courseBannerA.jpg";
 import courseBannerB from "../../assets/images/courseBannerB.jpg";
+import { motion } from "framer-motion";
 
 // Initialize Swiper modules
 SwiperCore.use([Autoplay, Navigation, Pagination]);
@@ -157,45 +158,57 @@ const CoursesPage = () => {
           </Box>
         </SwiperSlide>
       </Swiper>
+
       <Container sx={{ mb: 5 }}>
         {/* Search and Filter Section */}
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            marginBottom: 4,
-          }}
+        <motion.div
+          initial={{ opacity: 0, x: 0, y: -30 }}
+          animate={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 0.8 }}
         >
-          <TextField
-            label="Search courses"
-            variant="outlined"
-            size="small"
-            fullWidth
-            sx={{ marginRight: 2, flexGrow: 1, maxWidth: 600 }}
-          />
-          <Select
-            defaultValue="All"
-            variant="outlined"
-            size="small"
-            sx={{ width: 200 }}
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              marginBottom: 4,
+            }}
           >
-            <MenuItem value="All">All Categories</MenuItem>
-            <MenuItem value="Guitar">Guitar</MenuItem>
-            <MenuItem value="Piano">Piano</MenuItem>
-            <MenuItem value="Violin">Violin</MenuItem>
-            <MenuItem value="MusicTheory">Music Theory</MenuItem>
-          </Select>
-        </Box>
-
-        {/* Courses Section */}
-        <Grid container spacing={4}>
-          {courses.map((course, index) => (
-            <Grid item key={index} xs={12} sm={6} md={4} lg={3}>
-              <CourseCard {...course} />
-            </Grid>
-          ))}
-        </Grid>
+            <TextField
+              label="Search courses"
+              variant="outlined"
+              size="small"
+              fullWidth
+              sx={{ marginRight: 2, flexGrow: 1, maxWidth: 600 }}
+            />
+            <Select
+              defaultValue="All"
+              variant="outlined"
+              size="small"
+              sx={{ width: 200 }}
+            >
+              <MenuItem value="All">All Categories</MenuItem>
+              <MenuItem value="Guitar">Guitar</MenuItem>
+              <MenuItem value="Piano">Piano</MenuItem>
+              <MenuItem value="Violin">Violin</MenuItem>
+              <MenuItem value="MusicTheory">Music Theory</MenuItem>
+            </Select>
+          </Box>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          {/* Courses Section */}
+          <Grid container spacing={4}>
+            {courses.map((course, index) => (
+              <Grid item key={index} xs={12} sm={6} md={4} lg={3}>
+                <CourseCard {...course} />
+              </Grid>
+            ))}
+          </Grid>
+        </motion.div>
       </Container>
     </>
   );

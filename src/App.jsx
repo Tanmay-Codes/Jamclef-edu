@@ -14,6 +14,7 @@ import AboutPage from "./pages/AboutPage";
 import CoursesPage from "./pages/CoursesPage";
 import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/ContactPage";
+import CourseDesc from "./pages/CoursesPage/CourseDesc";
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = React.useState(false);
@@ -31,6 +32,7 @@ const App = () => {
             <Route path="courses" element={<CoursesPage />} />
             <Route path="blogs" element={<BlogPage />} />
             <Route path="contact" element={<ContactPage />} />
+            <Route path="courses/:id" element={<CourseDesc />} />
           </Route>
 
           <Route

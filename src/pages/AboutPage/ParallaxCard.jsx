@@ -21,32 +21,11 @@ import VisionGrid from "./VisionGrid";
 const ParallaxCard = () => {
   const theme = useTheme();
 
-  useEffect(() => {
-    let ticking = false;
-
-    const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-  // Parallax offset for the card (faster than the banner)
-
   return (
     <Box
       sx={{
         position: "relative",
-        top: "-50px", // Move faster with scroll
-        zIndex: 1,
-        transition: "top 0.1s ease-out",
+        top: "-50px",
       }}
     >
       <Container>

@@ -5,11 +5,16 @@ import { motion } from "framer-motion";
 import Banner from "../../components/Banner";
 import contactImage from "../../assets/images/contactForm.png";
 import musicalNotes from "../../assets/images/musical-notes.gif";
+import { gradients } from "../../theme";
 const ContactPage = () => {
   return (
     <>
       {/* Full-width Banner */}
-      <Banner />
+      <Banner
+        title={"Connect with Jamclef"}
+        bannerHeight={"300px"}
+        bannerImg={gradients.darkGradient}
+      />
 
       {/* Contact Form and Information Section */}
       <Container maxWidth="lg" sx={{ mt: 15, mb: 25 }}>

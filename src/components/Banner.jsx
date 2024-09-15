@@ -1,8 +1,8 @@
 import { Typography, Box } from "@mui/material";
 import { motion } from "framer-motion";
-import { gradients } from "../theme";
 
-const Banner = () => {
+// eslint-disable-next-line react/prop-types
+const Banner = ({ title, bannerHeight, bannerImg }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: -50 }}
@@ -11,8 +11,8 @@ const Banner = () => {
     >
       <Box
         sx={{
-          height: "300px",
-          backgroundImage: gradients.darkGradient,
+          height: `${bannerHeight}`,
+          backgroundImage: bannerImg,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -21,7 +21,7 @@ const Banner = () => {
         }}
       >
         <Typography variant="h4" component="h1">
-          Connect with JamClef
+          {title}
         </Typography>
       </Box>
     </motion.div>
