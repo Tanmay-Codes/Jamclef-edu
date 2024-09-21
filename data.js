@@ -94,10 +94,10 @@ export const electricGuitarCourse = {
   courseDetails: {
     courseId: "electricGuitar",
     courseTag: ["Electric Guitar", "Guitar"],
-    courseTitle: "Beginner Level: Kickstart Your Guitar Journey",
+    courseTitle: "Beginner Level: Kickstart Your Electric Guitar Journey",
     basePrice: "Rs499/- onwards",
     image:
-      "https://img.freepik.com/free-photo/portrait-person-playing-music-piano_23-2151051661.jpg?t=st=1725649795~exp=1725653395~hmac=b21f6035edf116553ad5a9f3f47deff00794dd83a764cd74689a63e7935732a8&w=996",
+      "https://img.freepik.com/free-photo/character-playing-electric-guitar_23-2151375960.jpg?t=st=1726946160~exp=1726949760~hmac=d3f96266611f566f59ffa87f10936082b4363ea091b8f042ce6db098427c0575&w=1060",
     rating: 4.8,
     reviews: 520,
     pricingOptions: {
@@ -135,8 +135,8 @@ export const electricGuitarCourse = {
 export const electricintermediateGuitarCourse = {
   courseDetails: {
     courseId: "intermediateGuitar",
-    courseTag: ["Intermediate Guitar", "Guitar"],
-    courseTitle: "Intermediate Level: Elevate Your Guitar Skills",
+    courseTag: ["Intermediate Guitar", "Electric", "Guitar"],
+    courseTitle: "Intermediate Level: Elevate Your Electric Guitar Skills",
     basePrice: "Rs499/- onwards",
     image:
       "https://img.freepik.com/free-photo/one-musician-playing-guitar-stage-night-generated-by-ai_188544-38794.jpg?t=st=1726772570~exp=1726776170~hmac=5242b60e1e9d39ddc140fa7cf4e14bb7a3d2cd0e5e77f512366e89b073a87bab&w=1060", // Add an image URL if available
@@ -178,8 +178,8 @@ export const electricintermediateGuitarCourse = {
 export const electricadvancedGuitarCourse = {
   courseDetails: {
     courseId: "advancedGuitar",
-    courseTag: ["Advanced", "Guitar"],
-    courseTitle: "Advanced Level: Master the Art of Guitar",
+    courseTag: ["Advanced", "Electric", "Guitar"],
+    courseTitle: "Advanced Level: Master the Art of Electric Guitar",
     basePrice: "Rs549/- onwards",
     image:
       "https://img.freepik.com/free-photo/young-guitarist-plucking-strings-acoustic-guitar-generated-by-ai_188544-18433.jpg?t=st=1726772646~exp=1726776246~hmac=14201ac29de1c32fe8cbfc50d6a7d02848e0a57c562f957c142f755a27a7d0d2&w=1060", // Add an image URL if available

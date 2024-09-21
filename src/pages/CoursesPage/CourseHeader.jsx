@@ -4,7 +4,6 @@ import SchoolIcon from "@mui/icons-material/School";
 import { Box, Button, Stack, Typography } from "@mui/material";
 import Banner from "../../components/Banner";
 import { gradients } from "../../theme";
-import guitarImg from "../../assets/images/guitarCourseA.png";
 
 const CourseHeader = ({ course }) => {
   console.log("Course : ", course);

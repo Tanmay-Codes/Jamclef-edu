@@ -57,13 +57,22 @@ const categories = [
 // eslint-disable-next-line react/prop-types
 const CoursesPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
-
+  const [search, setSearch] = useState("");
   const handleCategoryChange = (event) => {
     setSelectedCategory(event.target.value);
   };
-
+  const handleSearch = (e) => {
+    setSearch(e.target.value);
+    console.log("search : ", search);
+  };
   const filteredCourses =
-    selectedCategory === "All"
+    search.length > 0
+      ? courses.filter(
+          (course) =>
+            course.courseTitle?.toLowerCase().includes(search) ||
+            course.courseTag?.join(" ").toLowerCase().includes(search)
+        )
+      : selectedCategory === "All"
       ? courses
       : courses.filter((course) => course.courseTag.includes(selectedCategory));
 
@@ -149,6 +158,7 @@ const CoursesPage = () => {
               variant="outlined"
               size="small"
               fullWidth
+              onChange={(e) => handleSearch(e)}
               sx={{ marginRight: 2, flexGrow: 1, maxWidth: 600 }}
             />
             <Select
