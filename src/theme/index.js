@@ -22,6 +22,19 @@ export const gradients = {
   blueAccentGradient: "linear-gradient(135deg, #89CFF0 0%, #4682B4 100%)", // Light blue to steel blue
   mixedGradient:
     "linear-gradient(135deg, #333333 0%, #FF5722 50%, #ffffff 100%)", // Dark, orange, and white blend
+  sunsetGradient: "linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%)", // Peachy pink to soft orange
+  forestGradient: "linear-gradient(135deg, #5A9216 0%, #96C93D 100%)", // Earthy green shades
+  oceanGradient: "linear-gradient(135deg, #2BC0E4 0%, #EAECC6 100%)", // Aqua to soft yellow
+  midnightGradient: "linear-gradient(135deg, #2C3E50 0%, #4CA1AF 100%)", // Dark blue to cyan
+  purpleDream: "linear-gradient(135deg, #C33764 0%, #1D2671 100%)", // Dark pink to deep purple
+  flamingoGradient: "linear-gradient(135deg, #F54EA2 0%, #FF7676 100%)", // Hot pink to soft red
+  emeraldGradient: "linear-gradient(135deg, #3D9970 0%, #2ECC71 100%)", // Deep green to emerald green
+  sunriseGradient: "linear-gradient(135deg, #FF512F 0%, #DD2476 100%)", // Red-orange to deep magenta
+  spaceGradient:
+    "linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%)", // Dark spacey purple-blue tones
+  rainbowGradient:
+    "linear-gradient(135deg, #FF5F6D 0%, #FFC371 25%, #47A1F9 50%, #9B65DE 75%, #F57B42 100%)", // Vibrant rainbow
+  duskGradient: "linear-gradient(135deg, #ff6e7f 0%, #bfe9ff 100%)", // Red to light blue soft dusk
 };
 
 const lightTheme = createTheme({

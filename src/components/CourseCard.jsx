@@ -9,9 +9,8 @@ import {
 import { Link } from "react-router-dom";
 export const CourseCard = ({
   courseId,
-  title,
-  instructor,
-  price,
+  courseTitle,
+  basePrice,
   image,
   rating,
   reviews,
@@ -32,24 +31,24 @@ export const CourseCard = ({
       component="img"
       height="180"
       image={image}
-      alt={title}
+      alt={courseTitle}
       sx={{ borderRadius: "8px 8px 0 0" }}
     />
     <CardContent sx={{ padding: 2 }}>
       <Typography
-        variant="h6"
+        variant="h7"
         sx={{ fontWeight: "bold", color: "primary.main" }}
       >
-        {title}
+        {courseTitle}
       </Typography>
       <Typography variant="body2" color="text.secondary" sx={{ marginTop: 1 }}>
-        {instructor} | {rating} ★ ({reviews} reviews)
+        {rating} ★ ({reviews} reviews)
       </Typography>
       <Typography
-        variant="h6"
+        variant="h7"
         sx={{ fontWeight: "bold", color: "secondary.main", marginTop: 1 }}
       >
-        {price}
+        {basePrice}
       </Typography>
     </CardContent>
     <Link to={`${courseId}`}>

@@ -1,13 +1,9 @@
-import { Box, Container } from "@mui/material";
-import CourseHeader from "./CourseHeader";
+import { Box } from "@mui/material";
 import CourseDetailSection from "./CourseDetailSection";
 const CourseDesc = () => {
   return (
     <Box>
-      <CourseHeader />
-      <Container>
-        <CourseDetailSection />
-      </Container>
+      <CourseDetailSection />
     </Box>
   );
 };

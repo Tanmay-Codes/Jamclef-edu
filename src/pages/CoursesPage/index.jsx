@@ -19,37 +19,54 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import courseBannerA from "../../assets/images/courseBannerA.jpg";
 import courseBannerB from "../../assets/images/courseBannerB.jpg";
 import { CourseCard } from "../../components/CourseCard";
+import {
+  advancedAcousticGuitarCourse,
+  advancedPianoCourse,
+  beginnerPianoCourse,
+  electricadvancedGuitarCourse,
+  electricGuitarCourse,
+  electricintermediateGuitarCourse,
+  guitarA,
+  intermediateAcousticGuitarCourse,
+  intermediatePianoCourse,
+} from "../../../data";
+import { useState } from "react";
 
 // Initialize Swiper modules
 SwiperCore.use([Autoplay, Navigation, Pagination]);
 
 const courses = [
-  {
-    courseId: "guitar",
-    title: "Guitar Mastery for Beginners",
-    instructor: "John Doe",
-    price: "₹3,999",
-    image:
-      "https://img.freepik.com/free-photo/medium-shot-sideways-father-playing-guitar_23-2148222865.jpg?t=st=1725649731~exp=1725653331~hmac=a14aa4f3abd69530ec769ee3bea0e5b039a566c7806c019fabfcd1afa61a7829&w=996",
-    rating: 4.7,
-    reviews: 457,
-  },
-  {
-    courseId: "electricGuitar",
-    title: "Electric Guitar Beginner Level",
-    instructor: "Jane Smith",
-    price: "₹4,499",
-    image:
-      "https://img.freepik.com/free-photo/portrait-person-playing-music-piano_23-2151051661.jpg?t=st=1725649795~exp=1725653395~hmac=b21f6035edf116553ad5a9f3f47deff00794dd83a764cd74689a63e7935732a8&w=996",
-    rating: 4.8,
-    reviews: 520,
-  },
+  guitarA.courseDetails,
+  electricGuitarCourse.courseDetails,
+  electricintermediateGuitarCourse.courseDetails,
+  electricadvancedGuitarCourse.courseDetails,
+  intermediateAcousticGuitarCourse.courseDetails,
+  advancedAcousticGuitarCourse.courseDetails,
+  beginnerPianoCourse.courseDetails,
+  intermediatePianoCourse.courseDetails,
+  advancedPianoCourse.courseDetails,
   // Add more courses as needed
 ];
-
+const categories = [
+  { value: "All", label: "All Categories" },
+  { value: "Guitar", label: "Guitar" },
+  { value: "Piano", label: "Piano" },
+  { value: "Violin", label: "Violin" },
+  { value: "MusicTheory", label: "Music Theory" },
+];
 // eslint-disable-next-line react/prop-types
-
 const CoursesPage = () => {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  const handleCategoryChange = (event) => {
+    setSelectedCategory(event.target.value);
+  };
+
+  const filteredCourses =
+    selectedCategory === "All"
+      ? courses
+      : courses.filter((course) => course.courseTag.includes(selectedCategory));
+
   return (
     <>
       {/* Carousel Section */}
@@ -135,16 +152,17 @@ const CoursesPage = () => {
               sx={{ marginRight: 2, flexGrow: 1, maxWidth: 600 }}
             />
             <Select
-              defaultValue="All"
+              value={selectedCategory}
+              onChange={handleCategoryChange}
               variant="outlined"
               size="small"
               sx={{ width: 200 }}
             >
-              <MenuItem value="All">All Categories</MenuItem>
-              <MenuItem value="Guitar">Guitar</MenuItem>
-              <MenuItem value="Piano">Piano</MenuItem>
-              <MenuItem value="Violin">Violin</MenuItem>
-              <MenuItem value="MusicTheory">Music Theory</MenuItem>
+              {categories.map((category) => (
+                <MenuItem key={category.value} value={category.value}>
+                  {category.label}
+                </MenuItem>
+              ))}
             </Select>
           </Box>
         </motion.div>
@@ -155,7 +173,7 @@ const CoursesPage = () => {
         >
           {/* Courses Section */}
           <Grid container spacing={4}>
-            {courses.map((course, index) => (
+            {filteredCourses.map((course, index) => (
               <Grid item key={index} xs={12} sm={6} md={4} lg={3}>
                 <CourseCard {...course} />
               </Grid>

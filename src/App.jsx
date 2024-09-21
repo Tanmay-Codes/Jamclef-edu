@@ -15,6 +15,7 @@ import CoursesPage from "./pages/CoursesPage";
 import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/ContactPage";
 import CourseDesc from "./pages/CoursesPage/CourseDesc";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = React.useState(false);
@@ -26,6 +27,7 @@ const App = () => {
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
       <CssBaseline />
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<LandingPage />}>
             <Route path="about" element={<AboutPage />} />
