@@ -165,7 +165,7 @@ const Navbar = (props) => {
                       variant="outlined"
                       color="secondary"
                       component={Link}
-                      to="/dashboard"
+                      to="/login"
                     >
                       LogIn/SignUp
                     </Button>

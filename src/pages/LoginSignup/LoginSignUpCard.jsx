@@ -9,6 +9,9 @@ import {
   IconButton,
   Card,
   Typography,
+  RadioGroup,
+  FormControlLabel,
+  Radio,
 } from "@mui/material";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
@@ -41,6 +44,7 @@ const LoginSignUpCard = () => {
       [Yup.ref("password"), null],
       "Passwords must match"
     ),
+    role: Yup.string().required("Please select a role"),
   };
 
   const validationSchema = Yup.object(validationObj);
@@ -51,9 +55,11 @@ const LoginSignUpCard = () => {
       email: "",
       password: "",
       confirmPassword: "",
+      role: "", // Added role field
     },
     validationSchema: isSignup && validationSchema,
     onSubmit: async (values) => {
+      navigate("/dashboard");
       if (!isSignup) {
         try {
           const result = await dispatch(signIn(values)).unwrap();
@@ -89,40 +95,71 @@ const LoginSignUpCard = () => {
       alignItems="center"
     >
       <Card
-        elevation={5}
+        elevation={1}
         sx={{
           width: "30rem",
-          height: "36rem",
+          minHeight: "500px",
+          padding: "36px",
+          height: "auto",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           borderRadius: "20px",
+          background: "rgba(255, 255, 255, 0.95)",
         }}
       >
         <Box sx={{ width: "300px", margin: "0 auto" }}>
           <Typography variant="h5" fontWeight={700} textAlign="center" mb={2}>
-            {!isSignup ? "LogIn to KeyJavi" : " Create Your Account"}
+            {!isSignup ? "LogIn to Jamclef" : "Create Your Account"}
           </Typography>
           <form onSubmit={formik.handleSubmit}>
             <Grid container spacing={2}>
               {isSignup && (
-                <Grid item xs={12}>
-                  <TextField
-                    fullWidth
-                    variant="standard"
-                    id="fullName"
-                    name="fullName"
-                    label="Full Name"
-                    value={formik.values.fullName}
-                    onChange={formik.handleChange}
-                    error={
-                      formik.touched.fullName && Boolean(formik.errors.fullName)
-                    }
-                    helperText={
-                      formik.touched.fullName && formik.errors.fullName
-                    }
-                  />
-                </Grid>
+                <>
+                  <Grid item xs={12}>
+                    <Grid item xs={12}>
+                      <RadioGroup
+                        id="role"
+                        name="role"
+                        value={formik.values.role}
+                        onChange={formik.handleChange}
+                        row
+                      >
+                        <FormControlLabel
+                          value="Teacher"
+                          control={<Radio />}
+                          label="Teacher"
+                        />
+                        <FormControlLabel
+                          value="Student"
+                          control={<Radio />}
+                          label="Student"
+                        />
+                      </RadioGroup>
+                      {formik.touched.role && Boolean(formik.errors.role) && (
+                        <Typography color="error" variant="body2">
+                          {formik.errors.role}
+                        </Typography>
+                      )}
+                    </Grid>
+                    <TextField
+                      fullWidth
+                      variant="standard"
+                      id="fullName"
+                      name="fullName"
+                      label="Full Name"
+                      value={formik.values.fullName}
+                      onChange={formik.handleChange}
+                      error={
+                        formik.touched.fullName &&
+                        Boolean(formik.errors.fullName)
+                      }
+                      helperText={
+                        formik.touched.fullName && formik.errors.fullName
+                      }
+                    />
+                  </Grid>
+                </>
               )}
               <Grid item xs={12}>
                 <TextField
@@ -222,7 +259,7 @@ const LoginSignUpCard = () => {
                 >
                   {!isSignup
                     ? "Create your account now"
-                    : "Already have an account ? login here"}
+                    : "Already have an account? Login here"}
                 </Typography>
               </Grid>
             </Grid>

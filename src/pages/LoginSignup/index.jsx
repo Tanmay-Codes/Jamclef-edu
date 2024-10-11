@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import LoginSignUpCard from "./LoginSignUpCard";
 import "./pattern.css";
+import jamclef from "../../assets/images/aboutBanner.jpg";
 const Signup = () => {
   return (
     <Box
@@ -10,11 +11,15 @@ const Signup = () => {
         display: "flex",
       }}
     >
-      <div className="pattern">
-        <div className="circle circle1"></div>
-        <div className="circle circle2"></div>
-      </div>
-      <Box flex={1}>
+      {/* <div className="pattern"></div> */}
+      <Box
+        flex={1}
+        sx={{
+          backgroundImage: `url(${jamclef})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
         <LoginSignUpCard />
       </Box>
     </Box>

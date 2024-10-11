@@ -1,3 +1,5 @@
+//
+
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
@@ -47,7 +49,6 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   alignItems: "center",
   justifyContent: "flex-end",
   padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
   ...theme.mixins.toolbar,
 }));
 
@@ -68,20 +69,21 @@ const Drawer = styled(MuiDrawer, {
   }),
 }));
 
-// eslint-disable-next-line react/prop-types
 export default function Layout({ toggleTheme, isDarkMode }) {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
   const theme = useTheme();
   const handleDrawer = () => {
     setOpen((prev) => !prev);
   };
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: { xs: "block", sm: "flex" } }}>
       <CssBaseline />
-
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
+          <Typography variant="h6" ml={2}>
+            Jamclef - Admin
+          </Typography>
           <IconButton
             color="inherit"
             onClick={toggleTheme}
@@ -107,21 +109,21 @@ export default function Layout({ toggleTheme, isDarkMode }) {
                 textDecoration: "none",
                 color: "inherit",
                 "&.active": {
-                  backgroundColor: "#aaaaaa92", // Active background color
-                  color: theme.palette.primary.text, // Optional: Active text color
+                  backgroundColor: "#aaaaaa92",
+                  color: theme.palette.primary.text,
                 },
                 ":after": {
-                  content: '""', // Add an empty content element for the underline
+                  content: '""',
                   position: "absolute",
                   left: 0,
                   bottom: 0,
-                  width: "0%", // Hidden by default
-                  height: "2px", // Thickness of the underline
-                  backgroundColor: theme.palette.primary.main, // Underline color
-                  transition: "width 0.3s ease", // Transition for smooth animation
+                  width: "0%",
+                  height: "2px",
+                  backgroundColor: theme.palette.primary.main,
+                  transition: "width 0.3s ease",
                 },
                 ":hover:after": {
-                  width: "100%", // Expands to full width on hover
+                  width: "100%",
                 },
               }}
             >
@@ -131,12 +133,6 @@ export default function Layout({ toggleTheme, isDarkMode }) {
                   px: 2.5,
                   py: 1,
                 }}
-                onClick={(e) =>
-                  // console.log(
-                  //   e.target.ariaLabel ? e.target.ariaLabel : e.target.innerText
-                  // )
-                  console.log(e.target)
-                }
               >
                 {open ? (
                   !item.subMenu && (
@@ -184,10 +180,15 @@ export default function Layout({ toggleTheme, isDarkMode }) {
           ))}
         </List>
       </Drawer>
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-        {/* <PrivateRoute> */}
+      <Box
+        component="main"
+        sx={{
+          flexGrow: 1,
+          p: 3,
+          width: { xs: "100%", sm: "calc(100% - 300px)" },
+        }}
+      >
         <Outlet />
-        {/* </PrivateRoute> */}
       </Box>
     </Box>
   );

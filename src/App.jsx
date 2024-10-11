@@ -16,6 +16,8 @@ import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/ContactPage";
 import CourseDesc from "./pages/CoursesPage/CourseDesc";
 import ScrollToTop from "./components/ScrollToTop";
+import Signup from "./pages/LoginSignup";
+import Dashboard from "./pages/Dashboard";
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = React.useState(false);
@@ -36,6 +38,7 @@ const App = () => {
             <Route path="contact" element={<ContactPage />} />
             <Route path="courses/:id" element={<CourseDesc />} />
           </Route>
+          <Route path="login" element={<Signup />} />
 
           <Route
             path="/"
@@ -43,9 +46,9 @@ const App = () => {
               <Layout toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
             }
           >
-            <Route path="dashboard" element={<Projects />} />
+            <Route path="dashboard" element={<Dashboard />} />
 
-            <Route path="timesheet" element={<Clients />} />
+            <Route path="students" element={<Clients />} />
 
             {/*
             <Route path="contributors" element={<Contributors />} />
