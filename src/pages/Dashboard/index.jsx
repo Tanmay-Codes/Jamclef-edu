@@ -5,32 +5,17 @@ import {
   Box,
   useTheme,
   useMediaQuery,
-  CircularProgress,
 } from "@mui/material";
 import { PieChart, Pie, Cell } from "recharts";
 import DataTable from "./DataTable";
 import SalesRetentionChart from "./SalesRetenstionChart";
 import ClassTracker from "./ClassTracker";
+import ClassStatus from "./ClassStatus";
 
 const Dashboard = () => {
-  // Sample Data for charts
-  const salesData = [
-    { name: "Jan", sales: 300, retention: 250 },
-    { name: "Feb", sales: 400, retention: 300 },
-    { name: "Mar", sales: 500, retention: 350 },
-  ];
-
   const ticketData = [
     { name: "Open", value: 10 },
     { name: "Closed", value: 20 },
-  ];
-
-  const classData = [
-    { name: "Mon", classes: 5 },
-    { name: "Tue", classes: 3 },
-    { name: "Wed", classes: 4 },
-    { name: "Thu", classes: 6 },
-    { name: "Fri", classes: 8 },
   ];
 
   const theme = useTheme();
@@ -94,15 +79,17 @@ const Dashboard = () => {
         </Grid>
 
         {/* Current Active Class */}
-        <Grid item xs={12} md={6}>
-          <Card sx={{ padding: "2rem", textAlign: "center" }}>
+        {/* <Grid item xs={12} md={6}> */}
+        <ClassStatus />
+
+        {/* <Card sx={{ padding: "2rem", textAlign: "center" }}>
             <Typography variant="h6">Current Active Class</Typography>
             <CircularProgress size={80} thickness={5} color="secondary" />
             <Typography variant="body1" sx={{ marginTop: "1rem" }}>
               Active: Music Theory 101
             </Typography>
-          </Card>
-        </Grid>
+          </Card> */}
+        {/* </Grid> */}
       </Grid>
 
       {/* Data Table for Student/Teacher Management */}

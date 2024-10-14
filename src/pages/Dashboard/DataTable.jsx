@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Table,
   TableBody,
@@ -31,7 +30,8 @@ const sampleData = [
   // Add more data as needed
 ];
 
-const DataTable = ({ data = sampleData, onEdit, onDelete }) => {
+// eslint-disable-next-line react/prop-types
+const DataTable = ({ onEdit, onDelete }) => {
   return (
     <TableContainer component={Paper} sx={{ width: "100%", overflowX: "auto" }}>
       <Table aria-label="custom table">
@@ -65,7 +65,7 @@ const DataTable = ({ data = sampleData, onEdit, onDelete }) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {data.map((row) => (
+          {sampleData.map((row) => (
             <TableRow key={row.id}>
               <TableCell component="th" scope="row">
                 {row.name}

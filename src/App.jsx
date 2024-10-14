@@ -6,7 +6,6 @@ import { Route, HashRouter as Router, Routes } from "react-router-dom";
 // import { lightTheme, darkTheme } from "./theme";
 
 import Layout from "./layout";
-import Clients from "./pages/Clients";
 import LandingPage from "./pages/LandingPage";
 import Projects from "./pages/Projects";
 import { darkTheme, lightTheme } from "./theme";
@@ -18,6 +17,8 @@ import CourseDesc from "./pages/CoursesPage/CourseDesc";
 import ScrollToTop from "./components/ScrollToTop";
 import Signup from "./pages/LoginSignup";
 import Dashboard from "./pages/Dashboard";
+import StudentSection from "./pages/StudentSection";
+// import StudentSection from "./pages/StudentSection";
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = React.useState(false);
@@ -48,7 +49,7 @@ const App = () => {
           >
             <Route path="dashboard" element={<Dashboard />} />
 
-            <Route path="students" element={<Clients />} />
+            <Route path="students" element={<StudentSection />} />
 
             {/*
             <Route path="contributors" element={<Contributors />} />
