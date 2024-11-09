@@ -4,7 +4,7 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
-import { Typography } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
@@ -20,6 +20,8 @@ import * as React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { menuItems } from "../../data";
 import CustomAccordianMenu from "../components/CustomAccordianMenu";
+import { useNavigate } from "react-router-dom";
+import HomeIcon from "@mui/icons-material/Home";
 
 const drawerWidth = 300;
 
@@ -71,6 +73,8 @@ const Drawer = styled(MuiDrawer, {
 
 export default function Layout({ toggleTheme, isDarkMode }) {
   const [open, setOpen] = React.useState(true);
+  const navigate = useNavigate();
+
   const theme = useTheme();
   const handleDrawer = () => {
     setOpen((prev) => !prev);
@@ -84,16 +88,25 @@ export default function Layout({ toggleTheme, isDarkMode }) {
           <Typography variant="h6" ml={2}>
             Jamclef - Admin
           </Typography>
-          <IconButton
-            color="inherit"
-            onClick={toggleTheme}
-            sx={{ ml: "auto", opacity: open ? 1 : 0 }}
-          >
-            {isDarkMode ? <DarkModeIcon /> : <LightModeIcon />}
-          </IconButton>
-          <IconButton onClick={handleDrawer}>
-            {!open ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-          </IconButton>
+          <Stack direction={"row"}>
+            <IconButton
+              color="inherit"
+              onClick={toggleTheme}
+              sx={{ opacity: open ? 1 : 0 }}
+            >
+              {isDarkMode ? <DarkModeIcon /> : <LightModeIcon />}
+            </IconButton>
+            <IconButton
+              color="inherit"
+              onClick={() => navigate("/")} // Redirects to the homepage
+              sx={{ mr: 2 }}
+            >
+              <HomeIcon />
+            </IconButton>
+            <IconButton onClick={handleDrawer}>
+              {!open ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+            </IconButton>
+          </Stack>
         </DrawerHeader>
         <Divider />
         <List>

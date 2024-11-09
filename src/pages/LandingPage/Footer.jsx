@@ -6,6 +6,9 @@ import {
   Link,
   Typography,
 } from "@mui/material";
+import { Email, Instagram, Facebook, Twitter } from "@mui/icons-material";
+
+import logo from "../../assets/logos/JamClefLogo.png";
 export const Footer = () => {
   return (
     <Box
@@ -14,7 +17,7 @@ export const Footer = () => {
         backgroundColor: "#222", // Dark background
         color: "white",
         textAlign: "center",
-        height: "50vh",
+        height: "30vh",
         padding: 10,
       }}
     >
@@ -22,19 +25,19 @@ export const Footer = () => {
         <Grid container spacing={4}>
           <Grid item xs={12} md={3}>
             <Typography variant="h6" fontWeight="bold" gutterBottom>
-              Music WordPress Theme
+              What we do ?
             </Typography>
             <Typography variant="body2">
-              Powering your music, band, or artist website. Responsive, fast,
-              and interactive.
+              We provide a supportive environment where passion meets purpose,
+              helping you unlock your full potential.
             </Typography>
           </Grid>
-          <Grid item xs={12} md={3}>
+          {/* <Grid item xs={12} md={3}>
             <Typography variant="h6" fontWeight="bold" gutterBottom>
-              Find Our Band
+              Reach out to us
             </Typography>
             <Typography variant="body2">
-              Phone: 555-2611
+              Phone:
               <br />
               Email: contact@musictheme.com
             </Typography>
@@ -49,34 +52,77 @@ export const Footer = () => {
                 <i className="fab fa-instagram"></i>
               </IconButton>
             </Box>
-          </Grid>
+          </Grid> */}
           <Grid item xs={12} md={3}>
             <Typography variant="h6" fontWeight="bold" gutterBottom>
-              Latest News
+              Reach out to us
+            </Typography>
+
+            <Typography variant="body2" sx={{ color: "inherit" }}>
+              <Email
+                color="secondary"
+                sx={{ mr: 1, verticalAlign: "middle" }}
+              />
+              jamclefacademyofmusic@gmail.com
+            </Typography>
+
+            <Box sx={{ display: "flex", mt: 2, justifyContent: "center" }}>
+              <IconButton
+                color="secondary"
+                href="https://facebook.com"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <Facebook fontSize="small" />
+              </IconButton>
+
+              <IconButton
+                color="secondary"
+                href="https://twitter.com"
+                target="_blank"
+                aria-label="Twitter"
+              >
+                <Twitter fontSize="small" />
+              </IconButton>
+
+              <IconButton
+                color="secondary"
+                href="https://instagram.com"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <Instagram fontSize="small" />
+              </IconButton>
+            </Box>
+          </Grid>
+
+          <Grid item xs={12} md={3}>
+            <Typography variant="h6" fontWeight="bold" gutterBottom>
+              What you get to learn
             </Typography>
             <Typography variant="body2">
-              - Guide to Play Guitar
+              Guide to Play Guitar
               <br />
-              - Top Albums of the Year
-              <br />- Album Review
+              Guide to play Keyboard
+              <br />
+              Guide to play drums
+              <br />
+              Guide to singing and composing
             </Typography>
           </Grid>
           <Grid item xs={12} md={3}>
             <Typography variant="h6" fontWeight="bold" gutterBottom>
-              Listen Our Music
+              Learn music with us
             </Typography>
             <Box>
               <Link href="#">
-                <img
-                  src="https://via.placeholder.com/150x50"
-                  alt="Google Play Music"
-                />
+                <img src={logo} width={200} alt="Google Play Music" />
               </Link>
               <Link href="#">
-                <img
+                {/* <img
                   src="https://via.placeholder.com/150x50"
                   alt="Apple Music"
-                />
+                /> */}
               </Link>
             </Box>
           </Grid>
@@ -84,7 +130,7 @@ export const Footer = () => {
       </Container>
       <Box sx={{ mt: 4 }}>
         <Typography variant="body2">
-          Powered by Visualmodo WordPress Themes
+          &copy; Jamclef Ind, Inc. All rights reserved{" "}
         </Typography>
       </Box>
     </Box>

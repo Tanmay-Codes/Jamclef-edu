@@ -4,8 +4,8 @@ import {
   Typography,
   Box,
   Button,
-  useTheme,
-  useMediaQuery,
+  // useTheme,
+  // useMediaQuery,
   IconButton,
 } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
@@ -14,8 +14,8 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import DataTable from "./DataTable";
 
 const StudentSection = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  // const theme = useTheme();
+  // const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const studentData = [
     {
@@ -44,7 +44,7 @@ const StudentSection = () => {
     {
       field: "actions",
       headerName: "Actions",
-      renderCell: (params) => (
+      renderCell: () => (
         <Box>
           <IconButton aria-label="edit">
             <EditIcon />

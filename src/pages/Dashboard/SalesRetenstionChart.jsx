@@ -66,10 +66,9 @@ const SalesRetentionChart = () => {
 
         {/* Responsive Container for the LineChart */}
         <ResponsiveContainer width="100%" height={300}>
-          <LineChart data={filteredSalesData[timeFrame]}>
-            <XAxis dataKey="name" />
-            <YAxis domain={["dataMin", "dataMax"]} />{" "}
-            {/* Adjust Y-axis domain */}
+          <LineChart data={filteredSalesData[timeFrame] || []}>
+            <XAxis dataKey={"name" || "defaultName"} />
+            <YAxis domain={["dataMin" || 0, "dataMax" || "auto"]} />
             <Tooltip />
             <CartesianGrid stroke="#ccc" />
             <Line type="monotone" dataKey="sales" stroke="#8884d8" />
