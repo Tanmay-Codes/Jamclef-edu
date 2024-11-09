@@ -9,6 +9,7 @@ import Navbar from "./Navbar";
 import { Box } from "@mui/material";
 import { useRef } from "react";
 import { Outlet, useLocation } from "react-router-dom";
+import { HeroSectionVideo } from "./HeroSectionVideo";
 
 const LandingPage = () => {
   const location = useLocation();
@@ -30,7 +31,8 @@ const LandingPage = () => {
       {location.pathname == "/" && (
         <Box>
           <Box ref={section1Ref}>
-            <HeroSection />
+            {/* <HeroSection /> */}
+            <HeroSectionVideo />
           </Box>
           <AlbumSection />
           <MarketingSectionA />

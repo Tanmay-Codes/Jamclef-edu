@@ -4,5 +4,11 @@ import react from "@vitejs/plugin-react";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  assetsInclude: ["**/*.jpg", "**/*.jpeg", "**/*.png", "**/*.JPG"],
+  assetsInclude: [
+    "**/*.jpg",
+    "**/*.jpeg",
+    "**/*.png",
+    "**/*.JPG",
+    "**/*.mp4", // Added support for .mp4 videos
+  ],
 });
