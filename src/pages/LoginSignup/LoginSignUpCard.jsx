@@ -59,12 +59,12 @@ const LoginSignUpCard = () => {
     },
     validationSchema: isSignup && validationSchema,
     onSubmit: async (values) => {
-      navigate("/dashboard");
+      navigate("/edu/dashboard");
       if (!isSignup) {
         try {
           const result = await dispatch(signIn(values)).unwrap();
           if (result) {
-            navigate("/dashboard");
+            navigate("/edu/dashboard");
           }
         } catch (error) {
           if (error.message === "User doesn't exist") {
@@ -75,7 +75,7 @@ const LoginSignUpCard = () => {
         try {
           const result = await dispatch(signUp(values)).unwrap();
           if (result) {
-            navigate("/dashboard");
+            navigate("/edu/dashboard");
           }
         } catch (error) {
           if (error.message === "User already exists") {

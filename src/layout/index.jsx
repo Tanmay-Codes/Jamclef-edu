@@ -71,6 +71,7 @@ const Drawer = styled(MuiDrawer, {
   }),
 }));
 
+// eslint-disable-next-line react/prop-types
 export default function Layout({ toggleTheme, isDarkMode }) {
   const [open, setOpen] = React.useState(true);
   const navigate = useNavigate();

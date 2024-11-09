@@ -22,6 +22,7 @@ const MarketingSectionA = () => {
         <Stack>
           <img
             height={400}
+            width={300}
             src={marketingAimage}
             style={{ filter: `drop-shadow(${customShadows[4]})` }}
             alt="certificates"

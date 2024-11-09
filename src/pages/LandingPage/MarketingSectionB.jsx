@@ -44,6 +44,7 @@ const MarketingSectionB = () => {
           <Box sx={{ position: "relative" }}>
             <img
               height={300}
+              width={220}
               src={marketingBimage}
               alt="certificates"
               style={{
@@ -59,6 +60,7 @@ const MarketingSectionB = () => {
                 filter: `drop-shadow(${customShadows[4]})`,
               }}
               height={220}
+              width={"auto"}
               src={disc2}
               alt="disc"
               className="rotating-element"

@@ -2,7 +2,7 @@
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 import React from "react";
-import { Route, HashRouter as Router, Routes } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 // import { lightTheme, darkTheme } from "./theme";
 
 import Layout from "./layout";
@@ -42,7 +42,7 @@ const App = () => {
           <Route path="login" element={<Signup />} />
 
           <Route
-            path="/"
+            path="/edu/"
             element={
               <Layout toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
             }

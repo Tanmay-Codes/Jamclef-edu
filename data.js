@@ -6,13 +6,13 @@ import SpeedIcon from "@mui/icons-material/Speed";
 export const menuItems = [
   {
     title: "Dashboard",
-    path: "/dashboard",
+    path: "/edu/dashboard",
     icon: SpeedIcon,
     subMenu: false,
   },
   {
     title: "Students",
-    path: "/students",
+    path: "/edu/students",
     icon: AvTimerIcon,
   },
   {
