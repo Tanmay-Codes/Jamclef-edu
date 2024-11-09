@@ -34,6 +34,8 @@ export const HeroSectionVideo = () => {
         autoPlay
         loop
         muted
+        playsInline
+        preload="auto"
         style={{
           position: "absolute",
           top: 0,
