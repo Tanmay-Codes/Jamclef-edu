@@ -6,7 +6,13 @@ import {
   Link,
   Typography,
 } from "@mui/material";
-import { Email, Instagram, Facebook, Twitter } from "@mui/icons-material";
+import {
+  Email,
+  Instagram,
+  Facebook,
+  Twitter,
+  YouTube,
+} from "@mui/icons-material";
 
 import logo from "../../assets/logos/JamClefLogo.png";
 export const Footer = () => {
@@ -17,8 +23,8 @@ export const Footer = () => {
         backgroundColor: "#222", // Dark background
         color: "white",
         textAlign: "center",
-        height: "30vh",
-        padding: 10,
+        // height: "30vh",
+        padding: "2rem",
       }}
     >
       <Container>
@@ -59,39 +65,52 @@ export const Footer = () => {
             </Typography>
 
             <Typography variant="body2" sx={{ color: "inherit" }}>
-              <Email
-                color="secondary"
-                sx={{ mr: 1, verticalAlign: "middle" }}
-              />
-              jamclefacademyofmusic@gmail.com
+              <a
+                href="mailto:jamclefacademyofmusic@gmail.com"
+                style={{ color: "inherit", textDecoration: "none" }}
+              >
+                <Email
+                  color="secondary"
+                  sx={{ mr: 1, verticalAlign: "middle" }}
+                />
+                <u>jamclefacademyofmusic@gmail.com</u>
+              </a>
             </Typography>
 
             <Box sx={{ display: "flex", mt: 2, justifyContent: "center" }}>
               <IconButton
                 color="secondary"
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=61568187552429&mibextid=ZbWKwL"
                 target="_blank"
                 aria-label="Facebook"
               >
                 <Facebook fontSize="small" />
               </IconButton>
 
-              <IconButton
+              {/* <IconButton
                 color="secondary"
                 href="https://twitter.com"
                 target="_blank"
                 aria-label="Twitter"
               >
                 <Twitter fontSize="small" />
-              </IconButton>
+              </IconButton> */}
 
               <IconButton
                 color="secondary"
-                href="https://instagram.com"
+                href="https://www.instagram.com/jamclef_?igsh=NHRoYWkxZzRwemwy"
                 target="_blank"
                 aria-label="Instagram"
               >
                 <Instagram fontSize="small" />
+              </IconButton>
+              <IconButton
+                color="secondary"
+                href="https://youtube.com/@jamclefmusic?si=omP2EMj_YbWU14x9"
+                target="_blank"
+                aria-label="YouTube"
+              >
+                <YouTube fontSize="medium" />
               </IconButton>
             </Box>
           </Grid>
