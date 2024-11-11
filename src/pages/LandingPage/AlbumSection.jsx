@@ -14,8 +14,14 @@ import guitar from "../../assets/images/guitar.jpg";
 import vocals from "../../assets/images/vocals.jpg";
 import piano from "../../assets/images/piano.jpg";
 import musicTheory from "../../assets/images/musicTheory.jpg";
+import { useNavigate } from "react-router-dom";
+
 export const AlbumSection = () => {
   const theme = useTheme();
+  const navigate = useNavigate();
+  const handleLearnMoreClick = () => {
+    navigate("/courses");
+  };
   const albums = [
     {
       title: "Guitar",
@@ -129,7 +135,11 @@ export const AlbumSection = () => {
                       <Typography variant="h6" color={"primary"}>
                         {album.content}
                       </Typography>
-                      <Button color="secondary" sx={{ marginTop: 1 }}>
+                      <Button
+                        onClick={handleLearnMoreClick}
+                        color="secondary"
+                        sx={{ marginTop: 1 }}
+                      >
                         Learn More
                       </Button>
                     </Stack>

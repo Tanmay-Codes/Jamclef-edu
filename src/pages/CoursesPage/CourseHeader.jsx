@@ -4,9 +4,13 @@ import SchoolIcon from "@mui/icons-material/School";
 import { Box, Button, Stack, Typography } from "@mui/material";
 import Banner from "../../components/Banner";
 import { gradients } from "../../theme";
+import { useNavigate } from "react-router-dom";
 
 const CourseHeader = ({ course }) => {
-  console.log("Course : ", course);
+  const navigate = useNavigate();
+  const handleRegister = () => {
+    navigate("/contact");
+  };
   return (
     <Box>
       {/* Banner */}
@@ -55,7 +59,7 @@ const CourseHeader = ({ course }) => {
           >
             {/* Students Icon */}
             <Stack direction={"row"} alignItems={"center"} gap={1}>
-              <SchoolIcon />
+              <SchoolIcon color="secondary" />
               <Typography color={"primary.contrastText"}>
                 {course.courseDetails?.rating + " ratings"}
               </Typography>
@@ -63,7 +67,7 @@ const CourseHeader = ({ course }) => {
 
             {/* Reviews Icon */}
             <Stack direction={"row"} alignItems={"center"} gap={1}>
-              <GradeIcon />
+              <GradeIcon color="secondary" />
               <Typography color={"primary.contrastText"}>
                 {course.courseDetails?.reviews + " reviews"}
               </Typography>
@@ -73,7 +77,8 @@ const CourseHeader = ({ course }) => {
           {/* Register Button */}
           <Button
             variant="contained"
-            color="primary"
+            color="secondary"
+            onClick={handleRegister}
             sx={{ mt: 5, width: { xs: "100%", sm: 200 } }} // Full-width button on small screens, fixed width on medium+
           >
             Register Now

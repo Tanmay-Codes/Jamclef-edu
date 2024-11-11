@@ -1,6 +1,6 @@
 import { AlbumSection } from "./AlbumSection";
 import { Footer } from "./Footer";
-import { HeroSection } from "./HeroSection";
+// import { HeroSection } from "./HeroSection";
 import MarketingSectionA from "./MarketingSectionA";
 import MarketingSectionB from "./MarketingSectionB";
 import MarketingSectionC from "./MarketingSectionC";

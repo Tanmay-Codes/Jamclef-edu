@@ -3,6 +3,9 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import { motion } from "framer-motion";
 import * as Yup from "yup";
 import CustomButton from "../../components/CustomButton";
+import emailjs from "emailjs-com";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // Validation schema
 const validationSchema = Yup.object({
@@ -16,15 +19,35 @@ const validationSchema = Yup.object({
 });
 
 const ContactForm = () => {
-  const theme = useTheme(); // Access the theme to get primary color
+  const theme = useTheme();
+
   const initialValues = {
     name: "",
     email: "",
     message: "",
   };
 
-  const onSubmit = (values) => {
-    console.log("Form data", values);
+  // Handle form submission and send email
+  const onSubmit = async (values, { resetForm }) => {
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_SERVICE_KEY, // Service ID from .env
+        import.meta.env.VITE_TEMPLATE_ID, // Template ID from .env
+        {
+          to_name: "Your Name",
+          from_name: values.name,
+          from_email: values.email,
+          message: values.message,
+        },
+        import.meta.env.VITE_EJS_PUBLICKEY // Public key from .env
+      );
+
+      toast.success("Message sent successfully!"); // Show success toast notification
+      resetForm(); // Clear form after successful submission
+    } catch (error) {
+      console.error("Failed to send message:", error);
+      toast.error("Message failed to send. Please try again."); // Show error toast notification
+    }
   };
 
   return (
@@ -128,6 +151,7 @@ const ContactForm = () => {
           )}
         </Formik>
       </Paper>
+      <ToastContainer /> {/* Add ToastContainer to render toasts */}
     </motion.div>
   );
 };

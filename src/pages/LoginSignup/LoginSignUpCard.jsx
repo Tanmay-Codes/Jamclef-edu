@@ -233,6 +233,7 @@ const LoginSignUpCard = () => {
                   variant="contained"
                   fullWidth
                   type="submit"
+                  disabled={true}
                 >
                   {loading ? "loading..." : !isSignup ? "Login" : "Signup"}
                 </Button>
@@ -255,7 +256,7 @@ const LoginSignUpCard = () => {
                   variant="subtitle2"
                   color="primary"
                   mt={1}
-                  onClick={() => setIsSignup((prev) => !prev)}
+                  // onClick={() => setIsSignup((prev) => !prev)}
                 >
                   {!isSignup
                     ? "Create your account now"
