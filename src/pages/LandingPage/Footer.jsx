@@ -73,7 +73,7 @@ export const Footer = () => {
                   color="secondary"
                   sx={{ mr: 1, verticalAlign: "middle" }}
                 />
-                <u>jamclefacademyofmusic@gmail.com</u>
+                <u>contact@jamclef.com</u>
               </a>
             </Typography>
 

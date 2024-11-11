@@ -55,7 +55,7 @@ export const HeroSectionVideo = () => {
           left: 0,
           width: "100%",
           height: "100%",
-          backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent overlay
+          backgroundColor: "rgba(0, 0, 0, 0.2)", // Semi-transparent overlay
           display: "flex",
           justifyContent: "center",
           alignItems: "center",

@@ -10,6 +10,7 @@ import { Box } from "@mui/material";
 import { useRef } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { HeroSectionVideo } from "./HeroSectionVideo";
+import { ToastContainer } from "react-toastify";
 
 const LandingPage = () => {
   const location = useLocation();
@@ -24,6 +25,7 @@ const LandingPage = () => {
   };
   return (
     <Box sx={{ maxWidth: "100Vw" }}>
+      <ToastContainer />
       <Navbar
         sectionRefs={[section1Ref, section2Ref, section3Ref]}
         hadndleScrollToSection={scrollToSection}

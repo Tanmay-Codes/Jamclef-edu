@@ -11,8 +11,14 @@ import FeedbackIcon from "@mui/icons-material/Feedback";
 import TaskAltIcon from "@mui/icons-material/TaskAlt"; // Alternative icon for certification
 import Typography from "@mui/material/Typography";
 import { Box, Button, Container, Stack } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export default function TimelineSection() {
+  const navigate = useNavigate();
+  const handleStartJourney = () => {
+    navigate("/contact");
+  };
+
   return (
     <Box>
       <Container sx={{ paddingTop: 15, paddingBottom: 15 }}>
@@ -36,6 +42,7 @@ export default function TimelineSection() {
                 variant="outlined"
                 color="secondary"
                 sx={{ marginTop: 2 }}
+                onClick={handleStartJourney}
               >
                 Start Now
               </Button>
